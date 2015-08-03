@@ -4,4 +4,5 @@ Scenario: Opening the the Bootstrap Widgets / Alerts page
   Given I am on the BootsFaces start page
   When I navigate to "Bootstrap Widgets" / "Alerts"
   Then I can read "You can make Alerts dismissable"
+  And the page contents equals "Alert.txt"
   
