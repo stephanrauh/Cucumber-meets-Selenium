@@ -1,0 +1,252 @@
+<style>td {padding: 8px;}</style>
+                <h1>Date Picker</h1>
+                <p>BootsFaces derives the Date Picker component from jQuery UI's widget because of its ease of use and its configurability.</p>
+                
+                <strong>Date Picker modes</strong>
+                <p>The <code>&lt;b:datepicker&gt;</code> supports six modes for displaying the widget, specified with the attribute<code>mode</code>:</p>
+<form id="j_idt64" name="j_idt64" method="post" action="/BootsFacesWeb/jquery-ui/datepicker.jsf enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt64" value="j_idt64" />
+
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th style="width: 230px;">b:datepicker</th>
+                            <th><code>mode</code> attribute</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input id="j_idt64:j_idt66" name="j_idt64:j_idt66" type="text" class="form-control" placeholder="Click here" /><script id="j_idt64:j_idt66_js" type="text/javascript">$(function(){$('input[id="j_idt64:j_idt66"]').datepicker({dateFormat:'dd.mm.y',});$('input[id="j_idt64:j_idt66"]').datepicker("option",$.datepicker.regional["de"]);});</script><script>$.datepicker.setDefaults($.datepicker.regional['de']);</script></td>
+                            <td>popup</td>
+                            <td>In this mode, the Date picker is triggered only when the user clicks in the field.</td>
+                        </tr>
+                        <tr>
+                            <td><div class="input-group"><input id="j_idt64:j_idt68" name="j_idt64:j_idt68" type="text" class="form-control" placeholder="Select a Date" /><script id="j_idt64:j_idt68_js" type="text/javascript">$(function(){$('input[id="j_idt64:j_idt68"]').datepicker({dateFormat:'dd.mm.y',});$('input[id="j_idt64:j_idt68"]').datepicker("option",$.datepicker.regional["de"]);});</script><span id="j_idt64:j_idt68_input-group-addon" class="input-group-addon"><i id="j_idt64:j_idt68_icon" class="glyphicon glyphicon-calendar"></i></span></div><script id="j_idt64:j_idt68_input-group-addon_js" type="text/javascript">$(function(){$('span[id="j_idt64:j_idt68_input-group-addon"]').click(function() {var el=$('input[id="j_idt64:j_idt68"]');if(el.attr('data-DPisVisible') == 'true') {el.attr('data-DPisVisible', 'false');el.datepicker('hide');}else{el.attr('data-DPisVisible', 'true');el.datepicker('show');}});});</script><script>$.datepicker.setDefaults($.datepicker.regional['de']);</script></td>
+                            <td>popup-icon</td>
+                            <td>In this mode, the Date picker is triggered either when the user clicks in the field, or when the user clicks on the calendar icon. The icon is positioned on the right of the input.</td>
+                        </tr>
+                        <tr>
+                            <td><div class="input-group"><span id="j_idt64:j_idt70_input-group-addon" class="input-group-addon"><i id="j_idt64:j_idt70_icon" class="glyphicon glyphicon-calendar"></i></span><input id="j_idt64:j_idt70" name="j_idt64:j_idt70" type="text" class="form-control" placeholder="Select a Date" /><script id="j_idt64:j_idt70_js" type="text/javascript">$(function(){$('input[id="j_idt64:j_idt70"]').datepicker({dateFormat:'dd.mm.y',});$('input[id="j_idt64:j_idt70"]').datepicker("option",$.datepicker.regional["de"]);});</script></div><script id="j_idt64:j_idt70_input-group-addon_js" type="text/javascript">$(function(){$('span[id="j_idt64:j_idt70_input-group-addon"]').click(function() {var el=$('input[id="j_idt64:j_idt70"]');if(el.attr('data-DPisVisible') == 'true') {el.attr('data-DPisVisible', 'false');el.datepicker('hide');}else{el.attr('data-DPisVisible', 'true');el.datepicker('show');}});});</script><script>$.datepicker.setDefaults($.datepicker.regional['de']);</script></td>
+                            <td>icon-popup</td>
+                            <td>Same as above, but the icon is positioned on the left of the input.</td>
+                        </tr>
+                        <tr>
+                            <td><div class="input-group"><input id="j_idt64:j_idt72" name="j_idt64:j_idt72" type="text" class="form-control" /><script id="j_idt64:j_idt72_js" type="text/javascript">$(function(){$('input[id="j_idt64:j_idt72"]').datepicker({dateFormat:'dd.mm.y',showOn:'button',});$('input[id="j_idt64:j_idt72"]').datepicker("option",$.datepicker.regional["de"]);});</script><span id="j_idt64:j_idt72_input-group-addon" class="input-group-addon"><i id="j_idt64:j_idt72_icon" class="glyphicon glyphicon-calendar"></i></span></div><script id="j_idt64:j_idt72_input-group-addon_js" type="text/javascript">$(function(){$('span[id="j_idt64:j_idt72_input-group-addon"]').click(function() {var el=$('input[id="j_idt64:j_idt72"]');if(el.attr('data-DPisVisible') == 'true') {el.attr('data-DPisVisible', 'false');el.datepicker('hide');}else{el.attr('data-DPisVisible', 'true');el.datepicker('show');}});});</script><script>$.datepicker.setDefaults($.datepicker.regional['de']);</script></td>
+                            <td>toggle-icon</td>
+                            <td>This is the default mode. In this mode, the Date picker is triggered only when the user clicks on the calendar icon. The icon is positioned on the right of the input.</td>
+                        </tr>
+                        <tr>
+                            <td><div class="input-group"><span id="j_idt64:j_idt74_input-group-addon" class="input-group-addon"><i id="j_idt64:j_idt74_icon" class="glyphicon glyphicon-calendar"></i></span><input id="j_idt64:j_idt74" name="j_idt64:j_idt74" type="text" class="form-control" /><script id="j_idt64:j_idt74_js" type="text/javascript">$(function(){$('input[id="j_idt64:j_idt74"]').datepicker({dateFormat:'dd.mm.y',showOn:'button',});$('input[id="j_idt64:j_idt74"]').datepicker("option",$.datepicker.regional["de"]);});</script></div><script id="j_idt64:j_idt74_input-group-addon_js" type="text/javascript">$(function(){$('span[id="j_idt64:j_idt74_input-group-addon"]').click(function() {var el=$('input[id="j_idt64:j_idt74"]');if(el.attr('data-DPisVisible') == 'true') {el.attr('data-DPisVisible', 'false');el.datepicker('hide');}else{el.attr('data-DPisVisible', 'true');el.datepicker('show');}});});</script><script>$.datepicker.setDefaults($.datepicker.regional['de']);</script></td>
+                            <td>icon-toggle</td>
+                            <td>Same as above, but the icon is positioned on the left of the input.</td>
+                        </tr>
+                        <tr>
+                            <td><div id="j_idt64:j_idt76_div"></div><input id="j_idt64:j_idt76" name="j_idt64:j_idt76" type="hidden" class="form-control" /><script id="j_idt64:j_idt76_js" type="text/javascript">$(function(){$('div[id="j_idt64:j_idt76_div"]').datepicker({dateFormat:'dd.mm.y',onSelect: function(dateText, inst) { $('input[id="j_idt64:j_idt76"]').val(dateText); }});$('div[id="j_idt64:j_idt76_div"]').datepicker("option",$.datepicker.regional["de"]);});</script><script>$.datepicker.setDefaults($.datepicker.regional['de']);</script></td>
+                            <td>inline</td>
+                            <td>In this mode, the Date picker is displayed directly inline and no input field is shown.</td>
+                        </tr>
+                    </tbody>
+                </table><input type="hidden" />
+</form>
+                
+                <strong>Widget options</strong>
+                <p>BootsFaces <code>&lt;b:datepicker&gt;</code> tag supports jQuery UI's widget most relevant options:</p>
+                
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>changeMonth</code></td>
+                            <td>boolean</td>
+                            <td>Boolean value to specify if month selector should be shown.</td>
+                        </tr>
+                        <tr>
+                            <td><code>changeYear</code></td>
+                            <td>boolean</td>
+                            <td>Boolean value to specify if year selector should be shown.</td>
+                        </tr>
+                        <tr>
+                            <td><code>firstDay</code></td>
+                            <td>int</td>
+                            <td>Set the first day of the week: Sunday is 0, Monday is 1, etc. Default is 0 (Sunday).</td>
+                        </tr>
+                        <tr>
+                            <td><code>numberOfMonths</code></td>
+                            <td>int</td>
+                            <td>Number of months to show.</td>
+                        </tr>
+                        <tr>
+                            <td><code>showButtonPanel</code></td>
+                            <td>boolean</td>
+                            <td>Boolean value to specify if row Buttons to the bottom of calendar should be shown.</td>
+                        </tr>
+                        <tr>
+                            <td><code>showWeek</code></td>
+                            <td>boolean</td>
+                            <td>Boolean value to specify if Week number should be shown.</td>
+                        </tr>
+                    </tbody>
+                </table>
+<form id="fpickdt" name="fpickdt" method="post" action="/BootsFacesWeb/jquery-ui/datepicker.jsf enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="fpickdt" value="fpickdt" />
+<div id="fpickdt:j_idt79" class="well">
+                        <strong>Date Picker examples</strong><table cellpadding="5">
+<tbody>
+<tr>
+<td>Date:</td>
+<td><div class="input-group" type="date"><input id="fpickdt:adate" name="fpickdt:adate" type="text" class="form-control" placeholder="Select a Date" /><script id="fpickdt:adate_js" type="text/javascript">$(function(){$('input[id="fpickdt:adate"]').datepicker({dateFormat:'dd.mm.y',showButtonPanel:true,changeMonth:true,changeYear:true,showOn:'button',});$('input[id="fpickdt:adate"]').datepicker("option",$.datepicker.regional["de"]);});</script><span id="fpickdt:adate_input-group-addon" class="input-group-addon" type="date"><i id="fpickdt:adate_icon" class="glyphicon glyphicon-calendar" type="date"></i></span></div><script id="fpickdt:adate_input-group-addon_js" type="text/javascript">$(function(){$('span[id="fpickdt:adate_input-group-addon"]').click(function() {var el=$('input[id="fpickdt:adate"]');if(el.attr('data-DPisVisible') == 'true') {el.attr('data-DPisVisible', 'false');el.datepicker('hide');}else{el.attr('data-DPisVisible', 'true');el.datepicker('show');}});});</script><script>$.datepicker.setDefaults($.datepicker.regional['de']);</script></td>
+<td></td>
+<td>Date Picker with <code>showButtonPanel</code>, <code>changeMonth</code>, <code>changeYear</code> set to true.</td>
+</tr>
+<tr>
+<td>Date(3 months):</td>
+<td><div class="input-group" type="date"><span id="fpickdt:bdate_input-group-addon" class="input-group-addon" type="date"><i id="fpickdt:bdate_icon" class="glyphicon glyphicon-calendar" type="date"></i></span><input id="fpickdt:bdate" name="fpickdt:bdate" type="text" class="form-control" placeholder="Choose a Date" /><script id="fpickdt:bdate_js" type="text/javascript">$(function(){$('input[id="fpickdt:bdate"]').datepicker({dateFormat:'dd.mm.y',numberOfMonths:3,});$('input[id="fpickdt:bdate"]').datepicker("option",$.datepicker.regional["de"]);});</script></div><script id="fpickdt:bdate_input-group-addon_js" type="text/javascript">$(function(){$('span[id="fpickdt:bdate_input-group-addon"]').click(function() {var el=$('input[id="fpickdt:bdate"]');if(el.attr('data-DPisVisible') == 'true') {el.attr('data-DPisVisible', 'false');el.datepicker('hide');}else{el.attr('data-DPisVisible', 'true');el.datepicker('show');}});});</script><script>$.datepicker.setDefaults($.datepicker.regional['de']);</script></td>
+<td></td>
+<td>Date Picker with <code>numberOfMonths="3"</code> .</td>
+</tr>
+<tr>
+<td>Inline:</td>
+<td><div id="fpickdt:cdate_div" type="date"></div><input id="fpickdt:cdate" name="fpickdt:cdate" type="hidden" class="form-control" /><script id="fpickdt:cdate_js" type="text/javascript">$(function(){$('div[id="fpickdt:cdate_div"]').datepicker({dateFormat:'dd.mm.y',firstDay:1,showWeek:true,onSelect: function(dateText, inst) { $('input[id="fpickdt:cdate"]').val(dateText); }});$('div[id="fpickdt:cdate_div"]').datepicker("option",$.datepicker.regional["de"]);});</script><script>$.datepicker.setDefaults($.datepicker.regional['de']);</script></td>
+<td></td>
+<td>Inline Date Picker with <code>showWeek="true"</code> and <code>firstDay="1"</code> .</td>
+</tr>
+</tbody>
+</table>
+<div id="fpickdt:j_idt94" class="row"><div id="fpickdt:j_idt95" class="col-md-2 col-md-offset-3"><button type="submit" id="fpickdt:ajaxcb" name="fpickdt:ajaxcb" class="btn btn-primary" onclick="return BsF.ajax.cb(this, event,'fpickdt amodal',function(){$('#amodal').modal('show');});">Submit</button></div></div></div><input type="hidden" />
+</form><div id="amodal" class="modal" role="dialog" tabindex="-1" aria-labelledby="amodal_Label" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 id="amodal_Label">Submitted Dates</h4><br /></div><div class="modal-body"><table cellpadding="5">
+<tbody>
+<tr>
+<td>Date:</td>
+<td></td>
+<td>converted with <code>&lt;f:convertDateTime pattern="dd/MM/yyyy"/&gt;</code></td>
+</tr>
+<tr>
+<td>Date (3 months):</td>
+<td></td>
+<td>no conversion</td>
+</tr>
+<tr>
+<td>Inline:</td>
+<td></td>
+<td>converted with <code>&lt;f:convertDateTime pattern="MM/dd/yy"/&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</div><div class="modal-footer"><button id="j_idt108" name="j_idt108" type="button" class="btn btn-default" onclick="return false;" data-dismiss="modal">close</button><button id="j_idt109" name="j_idt109" type="button" class="btn btn-primary" onclick="return false;" data-dismiss="modal">Ok</button></div></div></div></div><script id="amodal_js" type="text/javascript">$(function(){$('#amodal').modal({ show: false });});</script>
+                
+                <br />
+                <h2>Reference section</h2><div class="panel-group"><div id="j_idt112" class="panel panel-info"><div class="panel-heading"><a data-toggle="collapse" data-target="#j_idt112content">
+				<b>Attributes of &lt;b:datepicker &gt;</b></a></div><div id="j_idt112content" class="panel-body  panel-collapse collapse in">
+			<table class="table table-striped table-hover" style="background-color: #fff">
+				<thead>
+					<tr>
+						<th>Attribute</th>
+						<th>Default value</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+					    <td>binding</td>
+					    <td>(none)</td>
+					    <td>An el expression referring to a server side UIComponent instance in a backing bean.</td>
+					</tr>
+					<tr>
+					    <td>changeMonth</td>
+					    <td>false</td>
+					    <td>Boolean value to specify if month selector should be shown.</td>
+					</tr>
+					<tr>
+					    <td>changeYear</td>
+					    <td>false</td>
+					    <td>Boolean value to specify if year selector should be shown.</td>
+					</tr>
+					<tr>
+					    <td>firstDay</td>
+					    <td>0 </td>
+					    <td>Set the first day of the week: Sunday is 0, Monday is 1, etc.</td>
+					</tr>
+					<tr>
+					    <td>id</td>
+					    <td>(none)</td>
+					    <td>Unique identifier of the component in a namingContainer.</td>
+					</tr>
+					<tr>
+					    <td>lang</td>
+					    <td>(none)</td>
+					    <td>This option allows you to localize the DatePicker, specifying the language code (eg. it, fr, es, nl). The datepicker uses the ISO 639-1 language codes eventually followed by ISO 3166-1 country codes. The Datepicker is localized with the language specified by the ViewRoot Locale.</td>
+					</tr>
+					<tr>
+					    <td>mode</td>
+					    <td>(none)</td>
+					    <td>Controls how the Calendar is showed, can be inline or popup. Default is popup.</td>
+					</tr>
+					<tr>
+					    <td>numberOfMonths</td>
+					    <td>0 </td>
+					    <td>Number of months to show.</td>
+					</tr>
+					<tr>
+					    <td>placeholder</td>
+					    <td>(none)</td>
+					    <td>The placeholder attribute shows text in a field until the field is focused upon, then hides the text.</td>
+					</tr>
+					<tr>
+					    <td>rendered</td>
+					    <td>false</td>
+					    <td>Boolean value to specify the rendering of the component, when set to false component will not be rendered.</td>
+					</tr>
+					<tr>
+					    <td>showButtonPanel</td>
+					    <td>false</td>
+					    <td>Boolean value to specify if row Buttons to the bottom of calendar should be shown.</td>
+					</tr>
+					<tr>
+					    <td>showWeek</td>
+					    <td>false</td>
+					    <td>Boolean value to specify if Week number should be shown.</td>
+					</tr>
+					<tr>
+					    <td>tooltip</td>
+					    <td>(none)</td>
+					    <td>The text of the tooltip.</td>
+					</tr>
+					<tr>
+					    <td>tooltipDelay</td>
+					    <td>(none)</td>
+					    <td>The tooltip is shown and hidden with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</td>
+					</tr>
+					<tr>
+					    <td>tooltipDelayHide</td>
+					    <td>(none)</td>
+					    <td>The tooltip is hidden with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</td>
+					</tr>
+					<tr>
+					    <td>tooltipDelayShow</td>
+					    <td>(none)</td>
+					    <td>The tooltip is shown with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</td>
+					</tr>
+					<tr>
+					    <td>tooltipPosition</td>
+					    <td>(none)</td>
+					    <td>Where is the tooltip to be displayed? Possible values: "top", "bottom", "right", "left", "auto", "auto top", "auto bottom", "auto right" and "auto left". Default to "bottom".</td>
+					</tr>
+					<tr>
+					    <td>value</td>
+					    <td>(none)</td>
+					    <td>Value.</td>
+					</tr>
+				</tbody>
+			</table></div></div></div><input type="hidden" name="j_idt112_collapsed" id="j_idt112_collapsed" value="false" /><script>
+ $('#j_idt112content').on('show.bs.collapse', function(){ document.getElementById('j_idt112_collapsed').value='false'; });
+ $('#j_idt112content').on('hide.bs.collapse', function(){ document.getElementById('j_idt112_collapsed').value='true'; });
+</script>
+                
+                <br /><br /><br /><br />

@@ -1,9 +1,101 @@
-<H1>Alerts</H1><P class=lead>Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</P><P>A default gray alert wouldn't make too much sense, so you're required to specify a type with the severity attribute. Choose from success, info, warning, or danger.</P><P>The <CODE>title</CODE> attribute is optional and will add a title to the Alert.</P><P>The b:alert tag is a container so you are free to use the markup you prefer for the message:</P><DIV class=panel-group><DIV id=j_idt64 class="panel panel-default"><DIV class=panel-heading><A data-toggle=collapse data-target=#j_idt64content><B>EXAMPLE</B></A></DIV><DIV id=j_idt64content class="panel-body  panel-collapse collapse in"><DIV id=j_idt66 class="alert alert-success fadein"><STRONG>Well done!</STRONG> You successfully read this important alert message.</DIV><DIV id=j_idt68 class="alert alert-info fadein"><STRONG>Heads up!</STRONG> This alert needs your attention, but it's not super important. </DIV><DIV id=j_idt70 class="alert alert-warning fadein"><STRONG>Warning!</STRONG> Best check yo self, you're not looking too good. </DIV><DIV id=j_idt72 class="alert alert-danger fadein"><STRONG>Oh snap!</STRONG> Change a few things up and try submitting again. </DIV><DIV id=j_idt74 class="alert alert-info fadein"><STRONG>Heads up!</STRONG><BR>This alert needs your attention, but it's not super important. </DIV></DIV><DIV class=panel-footer><STRONG>Markup:</STRONG><BR><DIV><DIV  class="syntaxhighlighter nogutter  xml ie"><TABLE border=0 cellpadding=0 cellspacing=0><TBODY><TR><TD class=code><DIV class=container><DIV class="line number1 index0 alt2"><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:alert</CODE> <CODE class="xml color1">severity</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"success"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">strong</CODE><CODE class="xml plain">&gt;Well done!&lt;/</CODE><CODE class="xml keyword">strong</CODE><CODE class="xml plain">&gt; You successfully read this important alert message.&lt;/</CODE><CODE class="xml keyword">b:alert</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number2 index1 alt1"><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:alert</CODE> <CODE class="xml color1">severity</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"info"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">strong</CODE><CODE class="xml plain">&gt;Heads up!&lt;/</CODE><CODE class="xml keyword">strong</CODE><CODE class="xml plain">&gt; This alert needs your attention, but it's not super important. &lt;/</CODE><CODE class="xml keyword">b:alert</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number3 index2 alt2"><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:alert</CODE> <CODE class="xml color1">severity</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"warning"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">strong</CODE><CODE class="xml plain">&gt;Warning!&lt;/</CODE><CODE class="xml keyword">strong</CODE><CODE class="xml plain">&gt; Best check yo self, you're not looking too good. &lt;/</CODE><CODE class="xml keyword">b:alert</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number4 index3 alt1"><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:alert</CODE> <CODE class="xml color1">severity</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"danger"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">strong</CODE><CODE class="xml plain">&gt;Oh snap!&lt;/</CODE><CODE class="xml keyword">strong</CODE><CODE class="xml plain">&gt; Change a few things up and try submitting again. &lt;/</CODE><CODE class="xml keyword">b:alert</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number5 index4 alt2"> </DIV><DIV class="line number6 index5 alt1"><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:alert</CODE> <CODE class="xml color1">severity</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"info"</CODE> <CODE class="xml color1">title</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"Heads up!"</CODE><CODE class="xml plain">&gt;This alert needs your attention, but it's not super important. &lt;/</CODE><CODE class="xml keyword">b:alert</CODE><CODE class="xml plain">&gt;</CODE></DIV></DIV></TD></TR></TBODY></TABLE></DIV></DIV></DIV></DIV></DIV><INPUT type=hidden name=j_idt64_collapsed id=j_idt64_collapsed value=false><SCRIPT>
+<h1>Alerts</h1>
+                <p class="lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
+                <p>A default gray alert wouldn't make too much sense, so you're required to specify a type with the severity attribute. Choose from success, info, warning, or danger.</p>
+                <p>The <code>title</code> attribute is optional and will add a title to the Alert.</p>
+                <p>The b:alert tag is a container so you are free to use the markup you prefer for the message:</p><div class="panel-group"><div id="j_idt64" class="panel panel-default"><div class="panel-heading"><a data-toggle="collapse" data-target="#j_idt64content"><b>EXAMPLE</b></a></div><div id="j_idt64content" class="panel-body  panel-collapse collapse in"><div id="j_idt66" class="alert alert-success fadein"><strong>Well done!</strong> You successfully read this important alert message.</div><div id="j_idt68" class="alert alert-info fadein"><strong>Heads up!</strong> This alert needs your attention, but it's not super important. </div><div id="j_idt70" class="alert alert-warning fadein"><strong>Warning!</strong> Best check yo self, you're not looking too good. </div><div id="j_idt72" class="alert alert-danger fadein"><strong>Oh snap!</strong> Change a few things up and try submitting again. </div><div id="j_idt74" class="alert alert-info fadein"><strong>Heads up!</strong><br />This alert needs your attention, but it's not super important. </div></div><div class="panel-footer">
+                        <strong>Markup:</strong><br />
+
+                        <script type="syntaxhighlighter" class="brush: xml; toolbar: false;first-line: 1">
+                            <![CDATA[
+                            <b:alert severity="success"><strong>Well done!</strong> You successfully read this important alert message.</b:alert>
+                            <b:alert severity="info"><strong>Heads up!</strong> This alert needs your attention, but it's not super important. </b:alert>
+                            <b:alert severity="warning"><strong>Warning!</strong> Best check yo self, you're not looking too good. </b:alert>
+                            <b:alert severity="danger"><strong>Oh snap!</strong> Change a few things up and try submitting again. </b:alert>
+                            
+                            <b:alert severity="info" title="Heads up!">This alert needs your attention, but it's not super important. </b:alert>
+                            ]]></script></div></div></div><input type="hidden" name="j_idt64_collapsed" id="j_idt64_collapsed" value="false" /><script>
  $('#j_idt64content').on('show.bs.collapse', function(){ document.getElementById('j_idt64_collapsed').value='false'; });
  $('#j_idt64content').on('hide.bs.collapse', function(){ document.getElementById('j_idt64_collapsed').value='true'; });
-</SCRIPT><BR><H4>Dismissable alerts</H4><P>You can make Alerts dismissable adding <CODE>closable="true"</CODE> :</P><DIV id=j_idt78 class="alert alert-warning fadein"><BUTTON type=button class=close data-dismiss=alert>×</BUTTON><STRONG>Warning Title</STRONG><BR><STRONG>Warning!</STRONG> Best check yo self, you're not looking too good. </DIV><P>this message will close when you click on the cross on the left.</P><BR><H2>Reference section</H2><DIV class=panel-group><DIV id=j_idt82 class="panel panel-info"><DIV class=panel-heading><A data-toggle=collapse data-target=#j_idt82content><B>Attributes of &lt;b:alert &gt;</B></A></DIV><DIV id=j_idt82content class="panel-body  panel-collapse collapse in"><TABLE class="table table-striped table-hover" style="background-color: #fff"><THEAD><TR><TH>Attribute</TH><TH>Default value</TH><TH>Description</TH></TR></THEAD><TBODY><TR><TD>binding</TD><TD>(none)</TD><TD>An el expression referring to a server side UIComponent instance in a backing bean.</TD></TR><TR><TD>closable</TD><TD>false</TD><TD>If true close button will be displayed.</TD></TR><TR><TD>id</TD><TD>(none)</TD><TD>Unique identifier of the component in a namingContainer.</TD></TR><TR><TD>rendered</TD><TD>false</TD><TD>Boolean value to specify the rendering of the component, when set to false component will not be rendered.</TD></TR><TR><TD>severity</TD><TD>(none)</TD><TD>Severity of the Alert, can be success, info, warning, danger. Default is warning.</TD></TR><TR><TD>title</TD><TD>(none)</TD><TD>Bold Title displayed before your message.</TD></TR><TR><TD>tooltip</TD><TD>(none)</TD><TD>The text of the tooltip.</TD></TR><TR><TD>tooltipDelay</TD><TD>(none)</TD><TD>The tooltip is shown and hidden with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</TD></TR><TR><TD>tooltipDelayHide</TD><TD>(none)</TD><TD>The tooltip is hidden with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</TD></TR><TR><TD>tooltipDelayShow</TD><TD>(none)</TD><TD>The tooltip is shown with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</TD></TR><TR><TD>tooltipPosition</TD><TD>(none)</TD><TD>Where is the tooltip to be displayed? Possible values: "top", "bottom", "right", "left", "auto", "auto top", "auto bottom", "auto right" and "auto left". Default to "bottom".</TD></TR></TBODY></TABLE></DIV></DIV></DIV><INPUT type=hidden name=j_idt82_collapsed id=j_idt82_collapsed value=false><SCRIPT>
+</script>
+                <br />
+                <h4>Dismissable alerts</h4>
+                <p>You can make Alerts dismissable adding <code>closable="true"</code> :</p><div id="j_idt78" class="alert alert-warning fadein"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Warning Title</strong><br /><strong>Warning!</strong> Best check yo self, you're not looking too good. </div>
+                <p>this message will close when you click on the cross on the left.</p>
+                
+                <br />
+                <h2>Reference section</h2><div class="panel-group"><div id="j_idt82" class="panel panel-info"><div class="panel-heading"><a data-toggle="collapse" data-target="#j_idt82content">
+				<b>Attributes of &lt;b:alert &gt;</b></a></div><div id="j_idt82content" class="panel-body  panel-collapse collapse in">
+			<table class="table table-striped table-hover" style="background-color: #fff">
+				<thead>
+					<tr>
+						<th>Attribute</th>
+						<th>Default value</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+					    <td>binding</td>
+					    <td>(none)</td>
+					    <td>An el expression referring to a server side UIComponent instance in a backing bean.</td>
+					</tr>
+					<tr>
+					    <td>closable</td>
+					    <td>false</td>
+					    <td>If true close button will be displayed.</td>
+					</tr>
+					<tr>
+					    <td>id</td>
+					    <td>(none)</td>
+					    <td>Unique identifier of the component in a namingContainer.</td>
+					</tr>
+					<tr>
+					    <td>rendered</td>
+					    <td>false</td>
+					    <td>Boolean value to specify the rendering of the component, when set to false component will not be rendered.</td>
+					</tr>
+					<tr>
+					    <td>severity</td>
+					    <td>(none)</td>
+					    <td>Severity of the Alert, can be success, info, warning, danger. Default is warning.</td>
+					</tr>
+					<tr>
+					    <td>title</td>
+					    <td>(none)</td>
+					    <td>Bold Title displayed before your message.</td>
+					</tr>
+					<tr>
+					    <td>tooltip</td>
+					    <td>(none)</td>
+					    <td>The text of the tooltip.</td>
+					</tr>
+					<tr>
+					    <td>tooltipDelay</td>
+					    <td>(none)</td>
+					    <td>The tooltip is shown and hidden with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</td>
+					</tr>
+					<tr>
+					    <td>tooltipDelayHide</td>
+					    <td>(none)</td>
+					    <td>The tooltip is hidden with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</td>
+					</tr>
+					<tr>
+					    <td>tooltipDelayShow</td>
+					    <td>(none)</td>
+					    <td>The tooltip is shown with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</td>
+					</tr>
+					<tr>
+					    <td>tooltipPosition</td>
+					    <td>(none)</td>
+					    <td>Where is the tooltip to be displayed? Possible values: "top", "bottom", "right", "left", "auto", "auto top", "auto bottom", "auto right" and "auto left". Default to "bottom".</td>
+					</tr>
+				</tbody>
+			</table></div></div></div><input type="hidden" name="j_idt82_collapsed" id="j_idt82_collapsed" value="false" /><script>
  $('#j_idt82content').on('show.bs.collapse', function(){ document.getElementById('j_idt82_collapsed').value='false'; });
  $('#j_idt82content').on('hide.bs.collapse', function(){ document.getElementById('j_idt82_collapsed').value='true'; });
-</SCRIPT><BR><BR><BR><SCRIPT type=text/javascript>
-          SyntaxHighlighter.all();
-        </SCRIPT>
+</script>
+                
+                <br /><br /><br />
+                <script type="text/javascript">
+                    SyntaxHighlighter.all();
+                </script>

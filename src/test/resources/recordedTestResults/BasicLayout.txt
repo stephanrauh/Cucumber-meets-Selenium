@@ -1,66 +1,483 @@
-<STYLE>
-          .show-grid [class^="col-"] {
-            background-color: rgba(86, 61, 124, 0.15);
-            border: 1px solid rgba(86, 61, 124, 0.2);
-            padding-bottom: 10px;
-            padding-top: 10px;
-            margin-bottom: 15px;
-          }
-          //Needed for TBS 3.0.1 (panel content overflow issue)
-          .panel-body { margin: 0px 15px; }
-        </STYLE><H1>Basic Layout</H1><P>BootsFaces inherits Bootstrap's responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. This allows developers to easyly build complex layouts without worrying how they will look on different devices .</P><P>There are only three tags you can use to create your layout: <CODE>b:container</CODE>, <CODE>b:row</CODE> and <CODE>b:column</CODE>.</P><P>The <CODE>b:container</CODE> is, as the name suggests, a container for <CODE>b:row</CODE>s and <CODE>b:column</CODE>s; it centers everything adding appropriate padding and margin.
-        As a rule of thumb, always surround your rows with a container. Note that containers can't be nested. By default, containers make for a airy design, leaving a lot of the screen white, as you can see on the page you're currently reading
-         (and similar to the layout in most books). 
-        You can reduce the amount of white space by adding the <CODE>fluid</CODE> attribute: <CODE>&lt;b:container fluid="true"&gt;</CODE>. 
-        </P><P><CODE>b:row</CODE> is a container for <CODE>b:column</CODE>s and you can't nest a <CODE>b:container</CODE> in a <CODE>b:column</CODE>.</P><P>BootsFaces takes full advantage of Bootstrap Grid system while maintaining the benefits of being a JSF framework.</P><P>This means that you can leverage Bootstrap's layout feature using for example the JSF templating system and conditional rendering to achieve and mantain very complex layouts without much effort.</P><P>This website is an example itself: it uses a page template with <CODE>ui:insert</CODE> and <CODE>ui:include</CODE> and the pages are <CODE>ui:composition</CODE>s.</P><H2>Understanding BootsFaces Grid System</H2><STRONG>Grid options</STRONG>
-        <DIV class=table-responsive><TABLE class="table table-bordered table-striped"><THEAD><TR><TH></TH><TH>
-                  Extra small devices
-                  <SMALL>Phones (&lt;768px)</SMALL>
-                </TH><TH>
-                  Small devices
-                  <SMALL>Tablets (≥768px)</SMALL>
-                </TH><TH>
-                  Medium devices
-                  <SMALL>Desktops (≥992px)</SMALL>
-                </TH><TH>
-                  Large devices
-                  <SMALL>Desktops (≥1200px)</SMALL>
-                </TH></TR></THEAD><TBODY><TR><TH>Grid behavior</TH><TD>Horizontal at all times</TD><TD colspan=3>Collapsed to start, horizontal above breakpoints</TD></TR><TR><TH>Max container width</TH><TD>None (auto)</TD><TD>750px</TD><TD>970px</TD><TD>1170px</TD></TR><TR><TH><CODE>b:column</CODE> attributes</TH><TD><CODE>col-xs</CODE></TD><TD><CODE>col-sm</CODE></TD><TD><CODE>col-md</CODE> or <CODE>span</CODE></TD><TD><CODE>col-lg</CODE></TD></TR><TR><TH># of columns</TH><TD colspan=4>12</TD></TR><TR><TH>Max column width</TH><TD class=text-muted>Auto</TD><TD>60px</TD><TD>78px</TD><TD>95px</TD></TR><TR><TH>Gutter width</TH><TD colspan=4>30px (15px on each side of a column)</TD></TR><TR><TH>Nestable</TH><TD colspan=4>Yes</TD></TR><TR><TH>Offsets</TH><TD class=text-muted colspan=1>N/A</TD><TD colspan=3>Yes</TD></TR><TR><TH>Column ordering</TH><TD class=text-muted>N/A</TD><TD colspan=3>Yes</TD></TR></TBODY></TABLE></DIV><BR><H3 id=grid-example-basic>Example: Stacked-to-horizontal</H3><P>Using a single set of <CODE>col-md=*</CODE> or <CODE>span=*</CODE> attributes, 
-          you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) 
-          before becoming horizontal on desktop (medium) devices.</P><P>The <CODE>span=*</CODE> and <CODE>offset=*</CODE> attributes are meant for this common special use case, to speed up markup writing</P><DIV class=panel-group><DIV id=j_idt64 class="panel panel-default"><DIV id=j_idt64content class="panel-body  panel-collapse collapse in"><DIV id=j_idt65 class="row show-grid"><DIV id=j_idt66 class=col-md-1>span=1</DIV><DIV id=j_idt68 class=col-md-1>span=1</DIV><DIV id=j_idt70 class=col-md-1>span=1</DIV><DIV id=j_idt72 class=col-md-1>span=1</DIV><DIV id=j_idt74 class=col-md-1>span=1</DIV><DIV id=j_idt76 class=col-md-1>span=1</DIV><DIV id=j_idt78 class=col-md-1>span=1</DIV><DIV id=j_idt80 class=col-md-1>span=1</DIV><DIV id=j_idt82 class=col-md-1>span=1</DIV><DIV id=j_idt84 class=col-md-1>span=1</DIV><DIV id=j_idt86 class=col-md-1>span=1</DIV><DIV id=j_idt88 class=col-md-1>span=1</DIV></DIV><DIV id=j_idt90 class="row show-grid"><DIV id=j_idt91 class=col-md-8>span=8</DIV><DIV id=j_idt93 class=col-md-4>span=4</DIV></DIV><DIV id=j_idt95 class="row show-grid"><DIV id=j_idt96 class=col-md-4>span=4</DIV><DIV id=j_idt98 class=col-md-4>span=4</DIV><DIV id=j_idt100 class=col-md-4>span=4</DIV></DIV><DIV id=j_idt102 class="row show-grid"><DIV id=j_idt103 class=col-md-6>span=6</DIV><DIV id=j_idt105 class=col-md-6>span=6</DIV></DIV></DIV><DIV class=panel-footer><STRONG>Markup:</STRONG><BR><DIV><DIV  class="syntaxhighlighter nogutter  xml ie"><TABLE border=0 cellpadding=0 cellspacing=0><TBODY><TR><TD class=code><DIV class=container><DIV class="line number1 index0 alt2"><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:row</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number2 index1 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"1"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=1"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number3 index2 alt2"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"1"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=1"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number4 index3 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"1"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=1"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number5 index4 alt2"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"1"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=1"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number6 index5 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"1"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=1"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number7 index6 alt2"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"1"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=1"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number8 index7 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"1"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=1"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number9 index8 alt2"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"1"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=1"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number10 index9 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"1"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=1"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number11 index10 alt2"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"1"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=1"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number12 index11 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"1"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=1"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number13 index12 alt2"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"1"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=1"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number14 index13 alt1"><CODE class="xml plain">&lt;/</CODE><CODE class="xml keyword">b:row</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number15 index14 alt2"><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:row</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number16 index15 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"8"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=8"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number17 index16 alt2"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"4"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=4"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number18 index17 alt1"><CODE class="xml plain">&lt;/</CODE><CODE class="xml keyword">b:row</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number19 index18 alt2"><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:row</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number20 index19 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"4"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=4"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number21 index20 alt2"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"4"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=4"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number22 index21 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"4"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=4"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number23 index22 alt2"><CODE class="xml plain">&lt;/</CODE><CODE class="xml keyword">b:row</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number24 index23 alt1"><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:row</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number25 index24 alt2"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"6"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=6"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number26 index25 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"6"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=6"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number27 index26 alt2"><CODE class="xml plain">&lt;/</CODE><CODE class="xml keyword">b:row</CODE><CODE class="xml plain">&gt;</CODE></DIV></DIV></TD></TR></TBODY></TABLE></DIV></DIV></DIV></DIV></DIV><INPUT type=hidden name=j_idt64_collapsed id=j_idt64_collapsed value=false><SCRIPT>
+<style>
+                    .show-grid [class^="col-"] {
+                        background-color: rgba(86, 61, 124, 0.15);
+                        border: 1px solid rgba(86, 61, 124, 0.2);
+                        padding-bottom: 10px;
+                        padding-top: 10px;
+                        margin-bottom: 15px;
+                    }
+                    //Needed for TBS 3.0.1 (panel content overflow issue)
+                    .panel-body { margin: 0px 15px; }
+                </style>
+                <h1>Basic Layout</h1>
+                <p>BootsFaces inherits Bootstrap's responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. This allows developers to easyly build complex layouts without worrying how they will look on different devices .</p>
+                <p>There are only three tags you can use to create your layout: <code>b:container</code>, <code>b:row</code> and <code>b:column</code>.</p>
+                <p>The <code>b:container</code> is, as the name suggests, a container for <code>b:row</code>s and <code>b:column</code>s; it centers everything adding appropriate padding and margin.
+                As a rule of thumb, always surround your rows with a container. Note that containers can't be nested. By default, containers make for a airy design, leaving a lot of the screen white, as you can see on the page you're currently reading
+                 (and similar to the layout in most books). 
+                You can reduce the amount of white space by adding the <code>fluid</code> attribute: <code>&lt;b:container fluid="true"&gt;</code>. 
+                </p>
+                <p><code>b:row</code> is a container for <code>b:column</code>s and you can't nest a <code>b:container</code> in a <code>b:column</code>.</p>
+                <p>BootsFaces takes full advantage of Bootstrap Grid system while maintaining the benefits of being a JSF framework.</p>
+                <p>This means that you can leverage Bootstrap's layout feature using for example the JSF templating system and conditional rendering to achieve and mantain very complex layouts without much effort.</p>
+                <p>This website is an example itself: it uses a page template with <code>ui:insert</code> and <code>ui:include</code> and the pages are <code>ui:composition</code>s.</p>
+                <h2>Understanding BootsFaces Grid System</h2>
+                <strong>Grid options</strong>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    Extra small devices
+                                    <small>Phones (&lt;768px)</small>
+                                </th>
+                                <th>
+                                    Small devices
+                                    <small>Tablets (â‰¥768px)</small>
+                                </th>
+                                <th>
+                                    Medium devices
+                                    <small>Desktops (â‰¥992px)</small>
+                                </th>
+                                <th>
+                                    Large devices
+                                    <small>Desktops (â‰¥1200px)</small>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Grid behavior</th>
+                                <td>Horizontal at all times</td>
+                                <td colspan="3">Collapsed to start, horizontal above breakpoints</td>
+                            </tr>
+                            <tr>
+                                <th>Max container width</th>
+                                <td>None (auto)</td>
+                                <td>750px</td>
+                                <td>970px</td>
+                                <td>1170px</td>
+                            </tr>
+                            <tr>
+                                <th><code>b:column</code> attributes</th>
+                                <td><code>col-xs</code></td>
+                                <td><code>col-sm</code></td>
+                                <td><code>col-md</code> or <code>span</code></td>
+                                <td><code>col-lg</code></td>
+                            </tr>
+                            <tr>
+                                <th># of columns</th>
+                                <td colspan="4">12</td>
+                            </tr>
+                            <tr>
+                                <th>Max column width</th>
+                                <td class="text-muted">Auto</td>
+                                <td>60px</td>
+                                <td>78px</td>
+                                <td>95px</td>
+                            </tr>
+                            <tr>
+                                <th>Gutter width</th>
+                                <td colspan="4">30px (15px on each side of a column)</td>
+                            </tr>
+                            <tr>
+                                <th>Nestable</th>
+                                <td colspan="4">Yes</td>
+                            </tr>
+                            <tr>
+                                <th>Offsets</th>
+                                <td class="text-muted" colspan="1">N/A</td>
+                                <td colspan="3">Yes</td>
+                            </tr>
+                            <tr>
+                                <th>Column ordering</th>
+                                <td class="text-muted">N/A</td>
+                                <td colspan="3">Yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br />
+                <h3 id="grid-example-basic">Example: Stacked-to-horizontal</h3>
+                <p>Using a single set of <code>col-md=*</code> or <code>span=*</code> attributes, 
+                    you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) 
+                    before becoming horizontal on desktop (medium) devices.</p>
+                <p>The <code>span=*</code> and <code>offset=*</code> attributes are meant for this common special use case, to speed up markup writing</p><div class="panel-group"><div id="j_idt64" class="panel panel-default"><div id="j_idt64content" class="panel-body  panel-collapse collapse in"><div id="j_idt65" class="row show-grid"><div id="j_idt66" class="col-md-1">span=1</div><div id="j_idt68" class="col-md-1">span=1</div><div id="j_idt70" class="col-md-1">span=1</div><div id="j_idt72" class="col-md-1">span=1</div><div id="j_idt74" class="col-md-1">span=1</div><div id="j_idt76" class="col-md-1">span=1</div><div id="j_idt78" class="col-md-1">span=1</div><div id="j_idt80" class="col-md-1">span=1</div><div id="j_idt82" class="col-md-1">span=1</div><div id="j_idt84" class="col-md-1">span=1</div><div id="j_idt86" class="col-md-1">span=1</div><div id="j_idt88" class="col-md-1">span=1</div></div><div id="j_idt90" class="row show-grid"><div id="j_idt91" class="col-md-8">span=8</div><div id="j_idt93" class="col-md-4">span=4</div></div><div id="j_idt95" class="row show-grid"><div id="j_idt96" class="col-md-4">span=4</div><div id="j_idt98" class="col-md-4">span=4</div><div id="j_idt100" class="col-md-4">span=4</div></div><div id="j_idt102" class="row show-grid"><div id="j_idt103" class="col-md-6">span=6</div><div id="j_idt105" class="col-md-6">span=6</div></div></div><div class="panel-footer">
+                        <strong>Markup:</strong><br />
+
+                        <script type="syntaxhighlighter" class="brush: xml; toolbar: false;gutter: false; first-line: 1">
+                            <![CDATA[
+                            <b:row>
+                                <b:column span="1"><h:outputText value="span=1"/></b:column>
+                                <b:column span="1"><h:outputText value="span=1"/></b:column>
+                                <b:column span="1"><h:outputText value="span=1"/></b:column>
+                                <b:column span="1"><h:outputText value="span=1"/></b:column>
+                                <b:column span="1"><h:outputText value="span=1"/></b:column>
+                                <b:column span="1"><h:outputText value="span=1"/></b:column>
+                                <b:column span="1"><h:outputText value="span=1"/></b:column>
+                                <b:column span="1"><h:outputText value="span=1"/></b:column>
+                                <b:column span="1"><h:outputText value="span=1"/></b:column>
+                                <b:column span="1"><h:outputText value="span=1"/></b:column>
+                                <b:column span="1"><h:outputText value="span=1"/></b:column>
+                                <b:column span="1"><h:outputText value="span=1"/></b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column span="8"><h:outputText value="span=8"/></b:column>
+                                <b:column span="4"><h:outputText value="span=4"/></b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column span="4"><h:outputText value="span=4"/></b:column>
+                                <b:column span="4"><h:outputText value="span=4"/></b:column>
+                                <b:column span="4"><h:outputText value="span=4"/></b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column span="6"><h:outputText value="span=6"/></b:column>
+                                <b:column span="6"><h:outputText value="span=6"/></b:column>
+                            </b:row>
+                            ]]></script></div></div></div><input type="hidden" name="j_idt64_collapsed" id="j_idt64_collapsed" value="false" /><script>
  $('#j_idt64content').on('show.bs.collapse', function(){ document.getElementById('j_idt64_collapsed').value='false'; });
  $('#j_idt64content').on('hide.bs.collapse', function(){ document.getElementById('j_idt64_collapsed').value='true'; });
-</SCRIPT><H3>Example: Mobile and desktop</H3><P>
-          Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid attributes including
-          <CODE>col-xs=*</CODE> and <CODE>col-md=*</CODE> in your columns. See the example below for a better idea of how it all works.
-        </P><DIV class=panel-group><DIV id=j_idt109 class="panel panel-default"><DIV id=j_idt109content class="panel-body  panel-collapse collapse in"><!-- Stack the columns on mobile by making one full-width and the other half-width --><DIV id=j_idt111 class="row show-grid"><DIV id=j_idt112 class="col-md-8 col-xs-12">col-xs=12 col-md=8</DIV><DIV id=j_idt114 class="col-md-4 col-xs-6">col-xs=6 col-md=4</DIV></DIV><!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop --><DIV id=j_idt117 class="row show-grid"><DIV id=j_idt118 class="col-md-4 col-xs-6">col-xs=6 col-md=4</DIV><DIV id=j_idt120 class="col-md-4 col-xs-6">col-xs=6 col-md=4</DIV><DIV id=j_idt122 class="col-md-4 col-xs-6">col-xs=6 col-md=4</DIV></DIV><!-- Columns are always 50% wide, on mobile and desktop --><DIV id=j_idt125 class="row show-grid"><DIV id=j_idt126 class=col-xs-6>col-xs=6</DIV><DIV id=j_idt128 class=col-xs-6>col-xs=6</DIV></DIV></DIV><DIV class=panel-footer><STRONG>Markup:</STRONG><BR><DIV><DIV  class="syntaxhighlighter nogutter  xml ie"><TABLE border=0 cellpadding=0 cellspacing=0><TBODY><TR><TD class=code><DIV class=container><DIV class="line number1 index0 alt2"><CODE class="xml comments">&lt;!-- Stack the columns on mobile by making one full-width and the other half-width --&gt;</CODE></DIV><DIV class="line number2 index1 alt1"><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:row</CODE> <CODE class="xml color1">styleClass</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"show-grid"</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number3 index2 alt2"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">col-xs</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"12"</CODE> <CODE class="xml color1">col-md</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"8"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"col-xs=12 col-md=8"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number4 index3 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">col-xs</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"6"</CODE> <CODE class="xml color1">col-md</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"4"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"col-xs=6 col-md=4"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number5 index4 alt2"><CODE class="xml plain">&lt;/</CODE><CODE class="xml keyword">b:row</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number6 index5 alt1"><CODE class="xml comments">&lt;!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop --&gt;</CODE></DIV><DIV class="line number7 index6 alt2"><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:row</CODE> <CODE class="xml color1">styleClass</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"show-grid"</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number8 index7 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">col-xs</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"6"</CODE> <CODE class="xml color1">col-md</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"4"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"col-xs=6 col-md=4"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number9 index8 alt2"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">col-xs</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"6"</CODE> <CODE class="xml color1">col-md</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"4"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"col-xs=6 col-md=4"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number10 index9 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">col-xs</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"6"</CODE> <CODE class="xml color1">col-md</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"4"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"col-xs=6 col-md=4"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number11 index10 alt2"><CODE class="xml plain">&lt;/</CODE><CODE class="xml keyword">b:row</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number12 index11 alt1"><CODE class="xml comments">&lt;!-- Columns are always 50% wide, on mobile and desktop --&gt;</CODE></DIV><DIV class="line number13 index12 alt2"><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:row</CODE> <CODE class="xml color1">styleClass</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"show-grid"</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number14 index13 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">col-xs</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"6"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"col-xs=6"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number15 index14 alt2"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">col-xs</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"6"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"col-xs=6"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number16 index15 alt1"><CODE class="xml plain">&lt;/</CODE><CODE class="xml keyword">b:row</CODE><CODE class="xml plain">&gt;</CODE></DIV></DIV></TD></TR></TBODY></TABLE></DIV></DIV></DIV></DIV></DIV><INPUT type=hidden name=j_idt109_collapsed id=j_idt109_collapsed value=false><SCRIPT>
+</script>
+                <h3>Example: Mobile and desktop</h3>
+                <p>
+                    Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid attributes including
+                    <code>col-xs=*</code> and <code>col-md=*</code> in your columns. See the example below for a better idea of how it all works.
+                </p><div class="panel-group"><div id="j_idt109" class="panel panel-default"><div id="j_idt109content" class="panel-body  panel-collapse collapse in">
+                    
+                    <!-- Stack the columns on mobile by making one full-width and the other half-width --><div id="j_idt111" class="row show-grid"><div id="j_idt112" class="col-md-8 col-xs-12">col-xs=12 col-md=8</div><div id="j_idt114" class="col-md-4 col-xs-6">col-xs=6 col-md=4</div></div>
+                    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop --><div id="j_idt117" class="row show-grid"><div id="j_idt118" class="col-md-4 col-xs-6">col-xs=6 col-md=4</div><div id="j_idt120" class="col-md-4 col-xs-6">col-xs=6 col-md=4</div><div id="j_idt122" class="col-md-4 col-xs-6">col-xs=6 col-md=4</div></div>
+                    <!-- Columns are always 50% wide, on mobile and desktop --><div id="j_idt125" class="row show-grid"><div id="j_idt126" class="col-xs-6">col-xs=6</div><div id="j_idt128" class="col-xs-6">col-xs=6</div></div></div><div class="panel-footer">
+                        <strong>Markup:</strong><br />
+
+                        <script type="syntaxhighlighter" class="brush: xml; toolbar: false;gutter: false; first-line: 1">
+                            <![CDATA[
+                            <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+                            <b:row styleClass="show-grid">
+                                <b:column col-xs="12" col-md="8"><h:outputText value="col-xs=12 col-md=8"/></b:column>
+                                <b:column col-xs="6" col-md="4"><h:outputText value="col-xs=6 col-md=4"/></b:column>
+                            </b:row>
+                            <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+                            <b:row styleClass="show-grid">
+                                <b:column col-xs="6" col-md="4"><h:outputText value="col-xs=6 col-md=4"/></b:column>
+                                <b:column col-xs="6" col-md="4"><h:outputText value="col-xs=6 col-md=4"/></b:column>
+                                <b:column col-xs="6" col-md="4"><h:outputText value="col-xs=6 col-md=4"/></b:column>
+                            </b:row>
+                            <!-- Columns are always 50% wide, on mobile and desktop -->
+                            <b:row styleClass="show-grid">
+                                <b:column col-xs="6"><h:outputText value="col-xs=6"/></b:column>
+                                <b:column col-xs="6"><h:outputText value="col-xs=6"/></b:column>
+                            </b:row>
+                            ]]></script></div></div></div><input type="hidden" name="j_idt109_collapsed" id="j_idt109_collapsed" value="false" /><script>
  $('#j_idt109content').on('show.bs.collapse', function(){ document.getElementById('j_idt109_collapsed').value='false'; });
  $('#j_idt109content').on('hide.bs.collapse', function(){ document.getElementById('j_idt109_collapsed').value='true'; });
-</SCRIPT><H3>Example: Mobile, tablet, desktops</H3><P>Build on the previous example by creating even more dynamic and powerful layouts with tablet <CODE>col-sm=*</CODE> attribute.</P><DIV class=panel-group><DIV id=j_idt132 class="panel panel-default"><DIV id=j_idt132content class="panel-body  panel-collapse collapse in"><DIV id=j_idt133 class="row show-grid"><DIV id=j_idt134 class="col-md-8 col-xs-12 col-sm-6">col-xs=12 col-sm=6 col-md=8</DIV><DIV id=j_idt136 class="col-md-4 col-xs-6 col-sm-6">col-xs=6 col-sm=6 col-md=4</DIV></DIV><DIV id=j_idt138 class="row show-grid"><DIV id=j_idt139 class="col-md-4 col-xs-6 col-sm-4">col-xs=6 col-sm=4 col-md=4</DIV><DIV id=j_idt141 class="col-md-4 col-xs-6 col-sm-4">col-xs=6 col-sm=4 col-md=4</DIV><!-- Optional: clear the XS cols if their content doesn't match in height --><DIV class="clearfix visible-xs"></DIV><DIV id=j_idt144 class="col-md-4 col-xs-6 col-sm-4">col-xs=6 col-sm=4 col-md=4</DIV></DIV></DIV><DIV class=panel-footer><STRONG>Markup:</STRONG><BR><DIV><DIV  class="syntaxhighlighter nogutter  xml ie"><TABLE border=0 cellpadding=0 cellspacing=0><TBODY><TR><TD class=code><DIV class=container><DIV class="line number1 index0 alt2"><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:row</CODE> <CODE class="xml color1">styleClass</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"show-grid"</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number2 index1 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">col-xs</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"12"</CODE> <CODE class="xml color1">col-sm</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"6"</CODE> <CODE class="xml color1">col-md</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"8"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"col-xs=12 col-sm=6 col-md=8"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number3 index2 alt2"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">col-xs</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"6"</CODE> <CODE class="xml color1">col-sm</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"6"</CODE> <CODE class="xml color1">col-md</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"4"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"col-xs=6 col-sm=6 col-md=4"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number4 index3 alt1"><CODE class="xml plain">&lt;/</CODE><CODE class="xml keyword">b:row</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number5 index4 alt2"><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:row</CODE> <CODE class="xml color1">styleClass</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"show-grid"</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number6 index5 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">col-xs</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"6"</CODE> <CODE class="xml color1">col-sm</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"4"</CODE> <CODE class="xml color1">col-md</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"4"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"col-xs=6 col-sm=4 col-md=4"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number7 index6 alt2"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">col-xs</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"6"</CODE> <CODE class="xml color1">col-sm</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"4"</CODE> <CODE class="xml color1">col-md</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"4"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"col-xs=6 col-sm=4 col-md=4"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number8 index7 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml comments">&lt;!-- Optional: clear the XS cols if their content doesn't match in height --&gt;</CODE></DIV><DIV class="line number9 index8 alt2"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">div</CODE> <CODE class="xml color1">class</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"clearfix visible-xs"</CODE><CODE class="xml plain">&gt;&lt;/</CODE><CODE class="xml keyword">div</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number10 index9 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">col-xs</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"6"</CODE> <CODE class="xml color1">col-sm</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"4"</CODE> <CODE class="xml color1">col-md</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"4"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"col-xs=6 col-sm=4 col-md=4"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number11 index10 alt2"><CODE class="xml plain">&lt;/</CODE><CODE class="xml keyword">b:row</CODE><CODE class="xml plain">&gt;</CODE></DIV></DIV></TD></TR></TBODY></TABLE></DIV></DIV></DIV></DIV></DIV><INPUT type=hidden name=j_idt132_collapsed id=j_idt132_collapsed value=false><SCRIPT>
+</script>
+                <h3>Example: Mobile, tablet, desktops</h3>
+                <p>Build on the previous example by creating even more dynamic and powerful layouts with tablet <code>col-sm=*</code> attribute.</p><div class="panel-group"><div id="j_idt132" class="panel panel-default"><div id="j_idt132content" class="panel-body  panel-collapse collapse in"><div id="j_idt133" class="row show-grid"><div id="j_idt134" class="col-md-8 col-xs-12 col-sm-6">col-xs=12 col-sm=6 col-md=8</div><div id="j_idt136" class="col-md-4 col-xs-6 col-sm-6">col-xs=6 col-sm=6 col-md=4</div></div><div id="j_idt138" class="row show-grid"><div id="j_idt139" class="col-md-4 col-xs-6 col-sm-4">col-xs=6 col-sm=4 col-md=4</div><div id="j_idt141" class="col-md-4 col-xs-6 col-sm-4">col-xs=6 col-sm=4 col-md=4</div>
+                        <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                        <div class="clearfix visible-xs"></div><div id="j_idt144" class="col-md-4 col-xs-6 col-sm-4">col-xs=6 col-sm=4 col-md=4</div></div></div><div class="panel-footer">
+                        <strong>Markup:</strong><br />
+
+                        <script type="syntaxhighlighter" class="brush: xml; toolbar: false;gutter: false; first-line: 1">
+                            <![CDATA[
+                            <b:row styleClass="show-grid">
+                                <b:column col-xs="12" col-sm="6" col-md="8"><h:outputText value="col-xs=12 col-sm=6 col-md=8"/></b:column>
+                                <b:column col-xs="6" col-sm="6" col-md="4"><h:outputText value="col-xs=6 col-sm=6 col-md=4"/></b:column>
+                            </b:row>
+                            <b:row styleClass="show-grid">
+                                <b:column col-xs="6" col-sm="4" col-md="4"><h:outputText value="col-xs=6 col-sm=4 col-md=4"/></b:column>
+                                <b:column col-xs="6" col-sm="4" col-md="4"><h:outputText value="col-xs=6 col-sm=4 col-md=4"/></b:column>
+                                <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                                <div class="clearfix visible-xs"></div>
+                                <b:column col-xs="6" col-sm="4" col-md="4"><h:outputText value="col-xs=6 col-sm=4 col-md=4"/></b:column>
+                            </b:row>
+                            ]]></script></div></div></div><input type="hidden" name="j_idt132_collapsed" id="j_idt132_collapsed" value="false" /><script>
  $('#j_idt132content').on('show.bs.collapse', function(){ document.getElementById('j_idt132_collapsed').value='false'; });
  $('#j_idt132content').on('hide.bs.collapse', function(){ document.getElementById('j_idt132_collapsed').value='true'; });
-</SCRIPT><H3>Offsetting columns</H3><P> Move columns to the right using <CODE>offset=*</CODE> or <CODE>col-md-offset=*</CODE> attribute.
-          These attributes increase the left margin of a column by <CODE>*</CODE> columns.
-          For example, <CODE>offest=4</CODE> moves a <CODE>span=4</CODE> over four columns.
-        </P><DIV class=panel-group><DIV id=j_idt148 class="panel panel-default"><DIV id=j_idt148content class="panel-body  panel-collapse collapse in"><DIV id=j_idt149 class="row show-grid"><DIV id=j_idt150 class=col-md-4>span=4</DIV><DIV id=j_idt152 class="col-md-4 col-md-offset-4">span=4 offset=4</DIV></DIV><DIV id=j_idt154 class="row show-grid"><DIV id=j_idt155 class="col-md-3 col-md-offset-3">span=3 offset=3</DIV><DIV id=j_idt157 class="col-md-3 col-md-offset-3">span=3 offset=3</DIV></DIV><DIV id=j_idt159 class="row show-grid"><DIV id=j_idt160 class="col-md-6 col-md-offset-3">span=6 offset=3</DIV></DIV></DIV><DIV class=panel-footer><STRONG>Markup:</STRONG><BR><DIV><DIV  class="syntaxhighlighter nogutter  xml ie"><TABLE border=0 cellpadding=0 cellspacing=0><TBODY><TR><TD class=code><DIV class=container><DIV class="line number1 index0 alt2"><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:row</CODE> <CODE class="xml color1">styleClass</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"show-grid"</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number2 index1 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"4"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=4"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number3 index2 alt2"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"4"</CODE> <CODE class="xml color1">offset</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"4"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=4 offset=4"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number4 index3 alt1"><CODE class="xml plain">&lt;/</CODE><CODE class="xml keyword">b:row</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number5 index4 alt2"><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:row</CODE> <CODE class="xml color1">styleClass</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"show-grid"</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number6 index5 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"3"</CODE> <CODE class="xml color1">offset</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"3"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=3 offset=3"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number7 index6 alt2"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"3"</CODE> <CODE class="xml color1">offset</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"3"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=3 offset=3"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number8 index7 alt1"><CODE class="xml plain">&lt;/</CODE><CODE class="xml keyword">b:row</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number9 index8 alt2"><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:row</CODE> <CODE class="xml color1">styleClass</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"show-grid"</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number10 index9 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">span</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"6"</CODE> <CODE class="xml color1">offset</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"3"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"span=6 offset=3"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number11 index10 alt2"><CODE class="xml plain">&lt;/</CODE><CODE class="xml keyword">b:row</CODE><CODE class="xml plain">&gt;</CODE></DIV></DIV></TD></TR></TBODY></TABLE></DIV></DIV></DIV></DIV></DIV><INPUT type=hidden name=j_idt148_collapsed id=j_idt148_collapsed value=false><SCRIPT>
+</script>
+                <h3>Offsetting columns</h3>
+                <p> Move columns to the right using <code>offset=*</code> or <code>col-md-offset=*</code> attribute.
+                    These attributes increase the left margin of a column by <code>*</code> columns.
+                    For example, <code>offest=4</code> moves a <code>span=4</code> over four columns.
+                </p><div class="panel-group"><div id="j_idt148" class="panel panel-default"><div id="j_idt148content" class="panel-body  panel-collapse collapse in"><div id="j_idt149" class="row show-grid"><div id="j_idt150" class="col-md-4">span=4</div><div id="j_idt152" class="col-md-4 col-md-offset-4">span=4 offset=4</div></div><div id="j_idt154" class="row show-grid"><div id="j_idt155" class="col-md-3 col-md-offset-3">span=3 offset=3</div><div id="j_idt157" class="col-md-3 col-md-offset-3">span=3 offset=3</div></div><div id="j_idt159" class="row show-grid"><div id="j_idt160" class="col-md-6 col-md-offset-3">span=6 offset=3</div></div></div><div class="panel-footer">
+                        <strong>Markup:</strong><br />
+
+                        <script type="syntaxhighlighter" class="brush: xml; toolbar: false;gutter: false; first-line: 1">
+                            <![CDATA[
+                            <b:row styleClass="show-grid">
+                                <b:column span="4"><h:outputText value="span=4"/></b:column>
+                                <b:column span="4" offset="4"><h:outputText value="span=4 offset=4"/></b:column>
+                            </b:row>
+                            <b:row styleClass="show-grid">
+                                <b:column span="3" offset="3"><h:outputText value="span=3 offset=3"/></b:column>
+                                <b:column span="3" offset="3"><h:outputText value="span=3 offset=3"/></b:column>
+                            </b:row>
+                            <b:row styleClass="show-grid">
+                                <b:column span="6" offset="3"><h:outputText value="span=6 offset=3"/></b:column>
+                            </b:row>
+                            ]]></script></div></div></div><input type="hidden" name="j_idt148_collapsed" id="j_idt148_collapsed" value="false" /><script>
  $('#j_idt148content').on('show.bs.collapse', function(){ document.getElementById('j_idt148_collapsed').value='false'; });
  $('#j_idt148content').on('hide.bs.collapse', function(){ document.getElementById('j_idt148_collapsed').value='true'; });
-</SCRIPT><H3>Nesting columns</H3><P>
-        To nest your content with the default grid, add a new <CODE>row</CODE> and set of <CODE>col-md=*</CODE> columns within an existing
-        <CODE>col-md=*</CODE> column.
-        Nested rows should include a set of columns that add up to 12.
-        </P><DIV class=panel-group><DIV id=j_idt164 class="panel panel-default"><DIV id=j_idt164content class="panel-body  panel-collapse collapse in"><DIV id=j_idt165 class="row show-grid"><DIV id=j_idt166 class=col-md-9>Level 1: col-md=9<DIV id=j_idt168 class="row show-grid"><DIV id=j_idt169 class=col-md-6>Level 2: col-md=6</DIV><DIV id=j_idt171 class=col-md-6>Level 2: col-md=6</DIV></DIV></DIV></DIV></DIV><DIV class=panel-footer><STRONG>Markup:</STRONG><BR><DIV><DIV  class="syntaxhighlighter nogutter  xml ie"><TABLE border=0 cellpadding=0 cellspacing=0><TBODY><TR><TD class=code><DIV class=container><DIV class="line number1 index0 alt2"><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:row</CODE> <CODE class="xml color1">styleClass</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"show-grid"</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number2 index1 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">col-md</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"9"</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number3 index2 alt2"><CODE class="xml spaces">    </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"Level 1: col-md=9"</CODE><CODE class="xml plain">/&gt;</CODE></DIV><DIV class="line number4 index3 alt1"><CODE class="xml spaces">    </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:row</CODE> <CODE class="xml color1">styleClass</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"show-grid"</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number5 index4 alt2"><CODE class="xml spaces">      </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">col-md</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"6"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"Level 2: col-md=6"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number6 index5 alt1"><CODE class="xml spaces">      </CODE><CODE class="xml plain">&lt;</CODE><CODE class="xml keyword">b:column</CODE> <CODE class="xml color1">col-md</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"6"</CODE><CODE class="xml plain">&gt;&lt;</CODE><CODE class="xml keyword">h:outputText</CODE> <CODE class="xml color1">value</CODE><CODE class="xml plain">=</CODE><CODE class="xml string">"Level 2: col-md=6"</CODE><CODE class="xml plain">/&gt;&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number7 index6 alt2"><CODE class="xml spaces">    </CODE><CODE class="xml plain">&lt;/</CODE><CODE class="xml keyword">b:row</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number8 index7 alt1"><CODE class="xml spaces">  </CODE><CODE class="xml plain">&lt;/</CODE><CODE class="xml keyword">b:column</CODE><CODE class="xml plain">&gt;</CODE></DIV><DIV class="line number9 index8 alt2"><CODE class="xml plain">&lt;/</CODE><CODE class="xml keyword">b:row</CODE><CODE class="xml plain">&gt;</CODE></DIV></DIV></TD></TR></TBODY></TABLE></DIV></DIV></DIV></DIV></DIV><INPUT type=hidden name=j_idt164_collapsed id=j_idt164_collapsed value=false><SCRIPT>
+</script>
+                <h3>Nesting columns</h3>
+                <p>
+                To nest your content with the default grid, add a new <code>row</code> and set of <code>col-md=*</code> columns within an existing
+                <code>col-md=*</code> column.
+                Nested rows should include a set of columns that add up to 12.
+                </p><div class="panel-group"><div id="j_idt164" class="panel panel-default"><div id="j_idt164content" class="panel-body  panel-collapse collapse in"><div id="j_idt165" class="row show-grid"><div id="j_idt166" class="col-md-9">Level 1: col-md=9<div id="j_idt168" class="row show-grid"><div id="j_idt169" class="col-md-6">Level 2: col-md=6</div><div id="j_idt171" class="col-md-6">Level 2: col-md=6</div></div></div></div></div><div class="panel-footer">
+                        <strong>Markup:</strong><br />
+
+                        <script type="syntaxhighlighter" class="brush: xml; toolbar: false;gutter: false; first-line: 1">
+                            <![CDATA[
+                            <b:row styleClass="show-grid">
+                                <b:column col-md="9">
+                                    <h:outputText value="Level 1: col-md=9"/>
+                                    <b:row styleClass="show-grid">
+                                        <b:column col-md="6"><h:outputText value="Level 2: col-md=6"/></b:column>
+                                        <b:column col-md="6"><h:outputText value="Level 2: col-md=6"/></b:column>
+                                    </b:row>
+                                </b:column>
+                            </b:row>
+                            ]]></script></div></div></div><input type="hidden" name="j_idt164_collapsed" id="j_idt164_collapsed" value="false" /><script>
  $('#j_idt164content').on('show.bs.collapse', function(){ document.getElementById('j_idt164_collapsed').value='false'; });
  $('#j_idt164content').on('hide.bs.collapse', function(){ document.getElementById('j_idt164_collapsed').value='true'; });
-</SCRIPT><BR><H2>Reference section</H2><DIV class=panel-group><DIV id=j_idt176 class="panel panel-info"><DIV class=panel-heading><A data-toggle=collapse data-target=#j_idt176content><B>Attributes of &lt;b:container &gt;</B></A></DIV><DIV id=j_idt176content class="panel-body  panel-collapse collapse in"><TABLE class="table table-striped table-hover" style="background-color: #fff"><THEAD><TR><TH>Attribute</TH><TH>Default value</TH><TH>Description</TH></TR></THEAD><TBODY><TR><TD>fluid</TD><TD>false</TD><TD>Boolean value default is false; when set to true, the container will be "fluid": a full width container, spanning the entire width of the viewport.</TD></TR><TR><TD>id</TD><TD>(none)</TD><TD>Unique identifier of the component in a namingContainer.</TD></TR><TR><TD>rendered</TD><TD>false</TD><TD>Boolean value to specify the rendering of the component, when set to false component will not be rendered.</TD></TR><TR><TD>style</TD><TD>(none)</TD><TD>Inline style of the input element.</TD></TR><TR><TD>styleClass</TD><TD>(none)</TD><TD>Style class of this element.</TD></TR><TR><TD>tooltip</TD><TD>(none)</TD><TD>The text of the tooltip.</TD></TR><TR><TD>tooltipDelay</TD><TD>(none)</TD><TD>The tooltip is shown and hidden with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</TD></TR><TR><TD>tooltipDelayHide</TD><TD>(none)</TD><TD>The tooltip is hidden with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</TD></TR><TR><TD>tooltipDelayShow</TD><TD>(none)</TD><TD>The tooltip is shown with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</TD></TR><TR><TD>tooltipPosition</TD><TD>(none)</TD><TD>Where is the tooltip to be displayed? Possible values: "top", "bottom", "right", "left", "auto", "auto top", "auto bottom", "auto right" and "auto left". Default to "bottom".</TD></TR></TBODY></TABLE></DIV></DIV></DIV><INPUT type=hidden name=j_idt176_collapsed id=j_idt176_collapsed value=false><SCRIPT>
+</script>
+
+                <br />
+                <h2>Reference section</h2><div class="panel-group"><div id="j_idt176" class="panel panel-info"><div class="panel-heading"><a data-toggle="collapse" data-target="#j_idt176content">
+				<b>Attributes of &lt;b:container &gt;</b></a></div><div id="j_idt176content" class="panel-body  panel-collapse collapse in">
+			<table class="table table-striped table-hover" style="background-color: #fff">
+				<thead>
+					<tr>
+						<th>Attribute</th>
+						<th>Default value</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+					    <td>fluid</td>
+					    <td>false</td>
+					    <td>Boolean value default is false; when set to true, the container will be "fluid": a full width container, spanning the entire width of the viewport.</td>
+					</tr>
+					<tr>
+					    <td>id</td>
+					    <td>(none)</td>
+					    <td>Unique identifier of the component in a namingContainer.</td>
+					</tr>
+					<tr>
+					    <td>rendered</td>
+					    <td>false</td>
+					    <td>Boolean value to specify the rendering of the component, when set to false component will not be rendered.</td>
+					</tr>
+					<tr>
+					    <td>style</td>
+					    <td>(none)</td>
+					    <td>Inline style of the input element.</td>
+					</tr>
+					<tr>
+					    <td>styleClass</td>
+					    <td>(none)</td>
+					    <td>Style class of this element.</td>
+					</tr>
+					<tr>
+					    <td>tooltip</td>
+					    <td>(none)</td>
+					    <td>The text of the tooltip.</td>
+					</tr>
+					<tr>
+					    <td>tooltipDelay</td>
+					    <td>(none)</td>
+					    <td>The tooltip is shown and hidden with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</td>
+					</tr>
+					<tr>
+					    <td>tooltipDelayHide</td>
+					    <td>(none)</td>
+					    <td>The tooltip is hidden with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</td>
+					</tr>
+					<tr>
+					    <td>tooltipDelayShow</td>
+					    <td>(none)</td>
+					    <td>The tooltip is shown with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</td>
+					</tr>
+					<tr>
+					    <td>tooltipPosition</td>
+					    <td>(none)</td>
+					    <td>Where is the tooltip to be displayed? Possible values: "top", "bottom", "right", "left", "auto", "auto top", "auto bottom", "auto right" and "auto left". Default to "bottom".</td>
+					</tr>
+				</tbody>
+			</table></div></div></div><input type="hidden" name="j_idt176_collapsed" id="j_idt176_collapsed" value="false" /><script>
  $('#j_idt176content').on('show.bs.collapse', function(){ document.getElementById('j_idt176_collapsed').value='false'; });
  $('#j_idt176content').on('hide.bs.collapse', function(){ document.getElementById('j_idt176_collapsed').value='true'; });
-</SCRIPT><DIV class=panel-group><DIV id=j_idt180 class="panel panel-info"><DIV class=panel-heading><A data-toggle=collapse data-target=#j_idt180content><B>Attributes of &lt;b:row &gt;</B></A></DIV><DIV id=j_idt180content class="panel-body  panel-collapse collapse in"><TABLE class="table table-striped table-hover" style="background-color: #fff"><THEAD><TR><TH>Attribute</TH><TH>Default value</TH><TH>Description</TH></TR></THEAD><TBODY><TR><TD>id</TD><TD>(none)</TD><TD>Unique identifier of the component in a namingContainer.</TD></TR><TR><TD>rendered</TD><TD>false</TD><TD>Boolean value to specify the rendering of the component, when set to false component will not be rendered.</TD></TR><TR><TD>style</TD><TD>(none)</TD><TD>Inline style of the input element.</TD></TR><TR><TD>styleClass</TD><TD>(none)</TD><TD>Style class of this element.</TD></TR><TR><TD>tooltip</TD><TD>(none)</TD><TD>The text of the tooltip.</TD></TR><TR><TD>tooltipDelay</TD><TD>(none)</TD><TD>The tooltip is shown and hidden with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</TD></TR><TR><TD>tooltipDelayHide</TD><TD>(none)</TD><TD>The tooltip is hidden with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</TD></TR><TR><TD>tooltipDelayShow</TD><TD>(none)</TD><TD>The tooltip is shown with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</TD></TR><TR><TD>tooltipPosition</TD><TD>(none)</TD><TD>Where is the tooltip to be displayed? Possible values: "top", "bottom", "right", "left", "auto", "auto top", "auto bottom", "auto right" and "auto left". Default to "bottom".</TD></TR></TBODY></TABLE></DIV></DIV></DIV><INPUT type=hidden name=j_idt180_collapsed id=j_idt180_collapsed value=false><SCRIPT>
+</script><div class="panel-group"><div id="j_idt180" class="panel panel-info"><div class="panel-heading"><a data-toggle="collapse" data-target="#j_idt180content">
+				<b>Attributes of &lt;b:row &gt;</b></a></div><div id="j_idt180content" class="panel-body  panel-collapse collapse in">
+			<table class="table table-striped table-hover" style="background-color: #fff">
+				<thead>
+					<tr>
+						<th>Attribute</th>
+						<th>Default value</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+					    <td>id</td>
+					    <td>(none)</td>
+					    <td>Unique identifier of the component in a namingContainer.</td>
+					</tr>
+					<tr>
+					    <td>rendered</td>
+					    <td>false</td>
+					    <td>Boolean value to specify the rendering of the component, when set to false component will not be rendered.</td>
+					</tr>
+					<tr>
+					    <td>style</td>
+					    <td>(none)</td>
+					    <td>Inline style of the input element.</td>
+					</tr>
+					<tr>
+					    <td>styleClass</td>
+					    <td>(none)</td>
+					    <td>Style class of this element.</td>
+					</tr>
+					<tr>
+					    <td>tooltip</td>
+					    <td>(none)</td>
+					    <td>The text of the tooltip.</td>
+					</tr>
+					<tr>
+					    <td>tooltipDelay</td>
+					    <td>(none)</td>
+					    <td>The tooltip is shown and hidden with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</td>
+					</tr>
+					<tr>
+					    <td>tooltipDelayHide</td>
+					    <td>(none)</td>
+					    <td>The tooltip is hidden with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</td>
+					</tr>
+					<tr>
+					    <td>tooltipDelayShow</td>
+					    <td>(none)</td>
+					    <td>The tooltip is shown with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</td>
+					</tr>
+					<tr>
+					    <td>tooltipPosition</td>
+					    <td>(none)</td>
+					    <td>Where is the tooltip to be displayed? Possible values: "top", "bottom", "right", "left", "auto", "auto top", "auto bottom", "auto right" and "auto left". Default to "bottom".</td>
+					</tr>
+				</tbody>
+			</table></div></div></div><input type="hidden" name="j_idt180_collapsed" id="j_idt180_collapsed" value="false" /><script>
  $('#j_idt180content').on('show.bs.collapse', function(){ document.getElementById('j_idt180_collapsed').value='false'; });
  $('#j_idt180content').on('hide.bs.collapse', function(){ document.getElementById('j_idt180_collapsed').value='true'; });
-</SCRIPT><DIV class=panel-group><DIV id=j_idt184 class="panel panel-info"><DIV class=panel-heading><A data-toggle=collapse data-target=#j_idt184content><B>Attributes of &lt;b:column &gt;</B></A></DIV><DIV id=j_idt184content class="panel-body  panel-collapse collapse in"><TABLE class="table table-striped table-hover" style="background-color: #fff"><THEAD><TR><TH>Attribute</TH><TH>Default value</TH><TH>Description</TH></TR></THEAD><TBODY><TR><TD>colLg</TD><TD>0 </TD><TD>Integer value to specify how many columns to span.</TD></TR><TR><TD>colMd</TD><TD>0 </TD><TD>Integer value to specify how many columns to span.</TD></TR><TR><TD>colSm</TD><TD>0 </TD><TD>Integer value to specify how many columns to span.</TD></TR><TR><TD>colXs</TD><TD>0 </TD><TD>Integer value to specify how many columns to span.</TD></TR><TR><TD>id</TD><TD>(none)</TD><TD>Unique identifier of the component in a namingContainer.</TD></TR><TR><TD>offset</TD><TD>0 </TD><TD>Integer value to specify how many columns to offset.</TD></TR><TR><TD>offsetLg</TD><TD>0 </TD><TD>Integer value to specify how many columns to offset.</TD></TR><TR><TD>offsetSm</TD><TD>0 </TD><TD>Integer value to specify how many columns to offset.</TD></TR><TR><TD>offsetXs</TD><TD>0 </TD><TD>Integer value to specify how many columns to offset.</TD></TR><TR><TD>rendered</TD><TD>false</TD><TD>Boolean value to specify the rendering of the component, when set to false component will not be rendered.</TD></TR><TR><TD>span</TD><TD>0 </TD><TD>Integer value to specify how many columns to span.</TD></TR><TR><TD>style</TD><TD>(none)</TD><TD>Inline style of the input element.</TD></TR><TR><TD>styleClass</TD><TD>(none)</TD><TD>Style class of this element.</TD></TR><TR><TD>tooltip</TD><TD>(none)</TD><TD>The text of the tooltip.</TD></TR><TR><TD>tooltipDelay</TD><TD>(none)</TD><TD>The tooltip is shown and hidden with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</TD></TR><TR><TD>tooltipDelayHide</TD><TD>(none)</TD><TD>The tooltip is hidden with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</TD></TR><TR><TD>tooltipDelayShow</TD><TD>(none)</TD><TD>The tooltip is shown with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</TD></TR><TR><TD>tooltipPosition</TD><TD>(none)</TD><TD>Where is the tooltip to be displayed? Possible values: "top", "bottom", "right", "left", "auto", "auto top", "auto bottom", "auto right" and "auto left". Default to "bottom".</TD></TR></TBODY></TABLE></DIV></DIV></DIV><INPUT type=hidden name=j_idt184_collapsed id=j_idt184_collapsed value=false><SCRIPT>
+</script><div class="panel-group"><div id="j_idt184" class="panel panel-info"><div class="panel-heading"><a data-toggle="collapse" data-target="#j_idt184content">
+				<b>Attributes of &lt;b:column &gt;</b></a></div><div id="j_idt184content" class="panel-body  panel-collapse collapse in">
+			<table class="table table-striped table-hover" style="background-color: #fff">
+				<thead>
+					<tr>
+						<th>Attribute</th>
+						<th>Default value</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+					    <td>colLg</td>
+					    <td>0 </td>
+					    <td>Integer value to specify how many columns to span.</td>
+					</tr>
+					<tr>
+					    <td>colMd</td>
+					    <td>0 </td>
+					    <td>Integer value to specify how many columns to span.</td>
+					</tr>
+					<tr>
+					    <td>colSm</td>
+					    <td>0 </td>
+					    <td>Integer value to specify how many columns to span.</td>
+					</tr>
+					<tr>
+					    <td>colXs</td>
+					    <td>0 </td>
+					    <td>Integer value to specify how many columns to span.</td>
+					</tr>
+					<tr>
+					    <td>id</td>
+					    <td>(none)</td>
+					    <td>Unique identifier of the component in a namingContainer.</td>
+					</tr>
+					<tr>
+					    <td>offset</td>
+					    <td>0 </td>
+					    <td>Integer value to specify how many columns to offset.</td>
+					</tr>
+					<tr>
+					    <td>offsetLg</td>
+					    <td>0 </td>
+					    <td>Integer value to specify how many columns to offset.</td>
+					</tr>
+					<tr>
+					    <td>offsetSm</td>
+					    <td>0 </td>
+					    <td>Integer value to specify how many columns to offset.</td>
+					</tr>
+					<tr>
+					    <td>offsetXs</td>
+					    <td>0 </td>
+					    <td>Integer value to specify how many columns to offset.</td>
+					</tr>
+					<tr>
+					    <td>rendered</td>
+					    <td>false</td>
+					    <td>Boolean value to specify the rendering of the component, when set to false component will not be rendered.</td>
+					</tr>
+					<tr>
+					    <td>span</td>
+					    <td>0 </td>
+					    <td>Integer value to specify how many columns to span.</td>
+					</tr>
+					<tr>
+					    <td>style</td>
+					    <td>(none)</td>
+					    <td>Inline style of the input element.</td>
+					</tr>
+					<tr>
+					    <td>styleClass</td>
+					    <td>(none)</td>
+					    <td>Style class of this element.</td>
+					</tr>
+					<tr>
+					    <td>tooltip</td>
+					    <td>(none)</td>
+					    <td>The text of the tooltip.</td>
+					</tr>
+					<tr>
+					    <td>tooltipDelay</td>
+					    <td>(none)</td>
+					    <td>The tooltip is shown and hidden with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</td>
+					</tr>
+					<tr>
+					    <td>tooltipDelayHide</td>
+					    <td>(none)</td>
+					    <td>The tooltip is hidden with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</td>
+					</tr>
+					<tr>
+					    <td>tooltipDelayShow</td>
+					    <td>(none)</td>
+					    <td>The tooltip is shown with a delay. This value is the delay in milliseconds. Defaults to 0 (no delay).</td>
+					</tr>
+					<tr>
+					    <td>tooltipPosition</td>
+					    <td>(none)</td>
+					    <td>Where is the tooltip to be displayed? Possible values: "top", "bottom", "right", "left", "auto", "auto top", "auto bottom", "auto right" and "auto left". Default to "bottom".</td>
+					</tr>
+				</tbody>
+			</table></div></div></div><input type="hidden" name="j_idt184_collapsed" id="j_idt184_collapsed" value="false" /><script>
  $('#j_idt184content').on('show.bs.collapse', function(){ document.getElementById('j_idt184_collapsed').value='false'; });
  $('#j_idt184content').on('hide.bs.collapse', function(){ document.getElementById('j_idt184_collapsed').value='true'; });
-</SCRIPT><BR><BR><BR><SCRIPT type=text/javascript>
-          SyntaxHighlighter.all();
-        </SCRIPT>
+</script>
+                
+                
+                <br /><br /><br />
+                <script type="text/javascript">
+                    SyntaxHighlighter.all();
+                </script>

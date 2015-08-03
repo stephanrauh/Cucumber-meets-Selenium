@@ -1,3 +1,11 @@
-<STYLE>td {padding: 8px;}</STYLE><H1>Requirements</H1><DIV id=j_idt64 class=well><P><B>BootsFaces is targeted at Java EE 6/7 and requires a Java 1.6 or later VM.</B></P><P><B>JSF 2.0, 2.1 and 2.2 are supported.</B></P><P><B>Oracle Mojarra 2.2+ or Apache MyFaces 2.2+</B></P><P class=text-warning>Note1: Oracle has dropped Commercial support for Glassfish as of version 4.0. Glassfish will therefore be only the Reference Implementation for Java EE.<BR>
-          BootsFaces is therefore first tested for compliance in Glassfish, then tested on other Application Servers such as WildFly/JBoss and TomEE.</P><P class=text-warning>Note2: Glassfish 3.2 is installed with an old version of the JSF library(2.1.6) with a known bug fixed in version 2.1.8.
-                      we suggest you to update the library to the latest version.</P></DIV><BR><BR><BR><BR>
+<style>td {padding: 8px;}</style>
+                <h1>Requirements</h1><div id="j_idt64" class="well">
+                    <p><b>BootsFaces is targeted at Java EE 6/7 and requires a Java 1.6 or later VM.</b></p>
+                    <p><b>JSF 2.0, 2.1 and 2.2 are supported.</b></p>
+                    <p><b>Oracle Mojarra 2.2+ or Apache MyFaces 2.2+</b></p>
+                    <p class="text-warning">Note1: Oracle has dropped Commercial support for Glassfish as of version 4.0. Glassfish will therefore be only the Reference Implementation for Java EE.<br />
+                    BootsFaces is therefore first tested for compliance in Glassfish, then tested on other Application Servers such as WildFly/JBoss and TomEE.</p>
+                    <p class="text-warning">Note2: Glassfish 3.2 is installed with an old version of the JSF library(2.1.6) with a known bug fixed in version 2.1.8.
+                                            we suggest you to update the library to the latest version.</p></div>
+                
+                <br /><br /><br /><br />
