@@ -71,19 +71,19 @@ public class BootsFacesTestDSL {
 			content = content.replace("\r\n", "\n").replace("\r", "\n");
 			if (new File("src/test/resources/recordedTestResults/" + filename).exists()) {
 				String original = WebDriverUtils.read("src/test/resources/recordedTestResults/" + filename);
-//				if (!original.equals(content)) {
-//					System.out.println(original.length() + " vs " + content.length());
-//					for (int i = 0; i < original.length(); i++) {
-//						if (original.charAt(i) != content.charAt(i)) {
-//							System.out.println("Difference at " + i);
-//							System.out.println(original.substring(i-20, i+20));
-//							System.out.println(content.substring(i-20, i+20));
-//							break;
-//
-//						}
-//					}
-//					WebDriverUtils.write("src/test/resources/recordedTestResults/" + filename + "2", content);
-//				}
+				if (!original.equals(content)) {
+					System.out.println(original.length() + " vs " + content.length());
+					for (int i = 0; i < original.length(); i++) {
+						if (original.charAt(i) != content.charAt(i)) {
+							System.out.println("Difference at " + i);
+							System.out.println(original.substring(i-60, i+60));
+							System.out.println(content.substring(i-60, i+60));
+							break;
+
+						}
+					}
+					WebDriverUtils.write("src/test/resources/recordedTestResults/" + filename + "2", content);
+				}
 				 Assert.assertEquals("The generated HTML code differs from the recorded HTML code.", original, content);
 			} else {
 				WebDriverUtils.write("src/test/resources/recordedTestResults/" + filename, content);

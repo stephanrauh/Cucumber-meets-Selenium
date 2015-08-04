@@ -1,5 +1,5 @@
 <style>td {padding: 8px;}</style>
-                <h1>Requirements</h1><div id="j_idt64" class="well">
+                <h1>Requirements</h1><div id="j_idt65" class="well">
                     <p><b>BootsFaces is targeted at Java EE 6/7 and requires a Java 1.6 or later VM.</b></p>
                     <p><b>JSF 2.0, 2.1 and 2.2 are supported.</b></p>
                     <p><b>Oracle Mojarra 2.2+ or Apache MyFaces 2.2+</b></p>

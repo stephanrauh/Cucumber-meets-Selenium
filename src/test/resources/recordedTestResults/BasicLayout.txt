@@ -103,7 +103,7 @@
                 <p>Using a single set of <code>col-md=*</code> or <code>span=*</code> attributes, 
                     you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) 
                     before becoming horizontal on desktop (medium) devices.</p>
-                <p>The <code>span=*</code> and <code>offset=*</code> attributes are meant for this common special use case, to speed up markup writing</p><div class="panel-group"><div id="j_idt64" class="panel panel-default"><div id="j_idt64content" class="panel-body  panel-collapse collapse in"><div id="j_idt65" class="row show-grid"><div id="j_idt66" class="col-md-1">span=1</div><div id="j_idt68" class="col-md-1">span=1</div><div id="j_idt70" class="col-md-1">span=1</div><div id="j_idt72" class="col-md-1">span=1</div><div id="j_idt74" class="col-md-1">span=1</div><div id="j_idt76" class="col-md-1">span=1</div><div id="j_idt78" class="col-md-1">span=1</div><div id="j_idt80" class="col-md-1">span=1</div><div id="j_idt82" class="col-md-1">span=1</div><div id="j_idt84" class="col-md-1">span=1</div><div id="j_idt86" class="col-md-1">span=1</div><div id="j_idt88" class="col-md-1">span=1</div></div><div id="j_idt90" class="row show-grid"><div id="j_idt91" class="col-md-8">span=8</div><div id="j_idt93" class="col-md-4">span=4</div></div><div id="j_idt95" class="row show-grid"><div id="j_idt96" class="col-md-4">span=4</div><div id="j_idt98" class="col-md-4">span=4</div><div id="j_idt100" class="col-md-4">span=4</div></div><div id="j_idt102" class="row show-grid"><div id="j_idt103" class="col-md-6">span=6</div><div id="j_idt105" class="col-md-6">span=6</div></div></div><div class="panel-footer">
+                <p>The <code>span=*</code> and <code>offset=*</code> attributes are meant for this common special use case, to speed up markup writing</p><div class="panel-group"><div id="j_idt65" class="panel panel-default"><div id="j_idt65content" class="panel-body  panel-collapse collapse in"><div id="j_idt66" class="row show-grid"><div id="j_idt67" class="col-md-1">span=1</div><div id="j_idt69" class="col-md-1">span=1</div><div id="j_idt71" class="col-md-1">span=1</div><div id="j_idt73" class="col-md-1">span=1</div><div id="j_idt75" class="col-md-1">span=1</div><div id="j_idt77" class="col-md-1">span=1</div><div id="j_idt79" class="col-md-1">span=1</div><div id="j_idt81" class="col-md-1">span=1</div><div id="j_idt83" class="col-md-1">span=1</div><div id="j_idt85" class="col-md-1">span=1</div><div id="j_idt87" class="col-md-1">span=1</div><div id="j_idt89" class="col-md-1">span=1</div></div><div id="j_idt91" class="row show-grid"><div id="j_idt92" class="col-md-8">span=8</div><div id="j_idt94" class="col-md-4">span=4</div></div><div id="j_idt96" class="row show-grid"><div id="j_idt97" class="col-md-4">span=4</div><div id="j_idt99" class="col-md-4">span=4</div><div id="j_idt101" class="col-md-4">span=4</div></div><div id="j_idt103" class="row show-grid"><div id="j_idt104" class="col-md-6">span=6</div><div id="j_idt106" class="col-md-6">span=6</div></div></div><div class="panel-footer">
                         <strong>Markup:</strong><br />
 
                         <script type="syntaxhighlighter" class="brush: xml; toolbar: false;gutter: false; first-line: 1">
@@ -135,19 +135,19 @@
                                 <b:column span="6"><h:outputText value="span=6"/></b:column>
                                 <b:column span="6"><h:outputText value="span=6"/></b:column>
                             </b:row>
-                            ]]></script></div></div></div><input type="hidden" name="j_idt64_collapsed" id="j_idt64_collapsed" value="false" /><script>
- $('#j_idt64content').on('show.bs.collapse', function(){ document.getElementById('j_idt64_collapsed').value='false'; });
- $('#j_idt64content').on('hide.bs.collapse', function(){ document.getElementById('j_idt64_collapsed').value='true'; });
+                            ]]></script></div></div></div><input type="hidden" name="j_idt65_collapsed" id="j_idt65_collapsed" value="false" /><script>
+ $('#j_idt65content').on('show.bs.collapse', function(){ document.getElementById('j_idt65_collapsed').value='false'; });
+ $('#j_idt65content').on('hide.bs.collapse', function(){ document.getElementById('j_idt65_collapsed').value='true'; });
 </script>
                 <h3>Example: Mobile and desktop</h3>
                 <p>
                     Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid attributes including
                     <code>col-xs=*</code> and <code>col-md=*</code> in your columns. See the example below for a better idea of how it all works.
-                </p><div class="panel-group"><div id="j_idt109" class="panel panel-default"><div id="j_idt109content" class="panel-body  panel-collapse collapse in">
+                </p><div class="panel-group"><div id="j_idt110" class="panel panel-default"><div id="j_idt110content" class="panel-body  panel-collapse collapse in">
                     
-                    <!-- Stack the columns on mobile by making one full-width and the other half-width --><div id="j_idt111" class="row show-grid"><div id="j_idt112" class="col-md-8 col-xs-12">col-xs=12 col-md=8</div><div id="j_idt114" class="col-md-4 col-xs-6">col-xs=6 col-md=4</div></div>
-                    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop --><div id="j_idt117" class="row show-grid"><div id="j_idt118" class="col-md-4 col-xs-6">col-xs=6 col-md=4</div><div id="j_idt120" class="col-md-4 col-xs-6">col-xs=6 col-md=4</div><div id="j_idt122" class="col-md-4 col-xs-6">col-xs=6 col-md=4</div></div>
-                    <!-- Columns are always 50% wide, on mobile and desktop --><div id="j_idt125" class="row show-grid"><div id="j_idt126" class="col-xs-6">col-xs=6</div><div id="j_idt128" class="col-xs-6">col-xs=6</div></div></div><div class="panel-footer">
+                    <!-- Stack the columns on mobile by making one full-width and the other half-width --><div id="j_idt112" class="row show-grid"><div id="j_idt113" class="col-md-8 col-xs-12">col-xs=12 col-md=8</div><div id="j_idt115" class="col-md-4 col-xs-6">col-xs=6 col-md=4</div></div>
+                    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop --><div id="j_idt118" class="row show-grid"><div id="j_idt119" class="col-md-4 col-xs-6">col-xs=6 col-md=4</div><div id="j_idt121" class="col-md-4 col-xs-6">col-xs=6 col-md=4</div><div id="j_idt123" class="col-md-4 col-xs-6">col-xs=6 col-md=4</div></div>
+                    <!-- Columns are always 50% wide, on mobile and desktop --><div id="j_idt126" class="row show-grid"><div id="j_idt127" class="col-xs-6">col-xs=6</div><div id="j_idt129" class="col-xs-6">col-xs=6</div></div></div><div class="panel-footer">
                         <strong>Markup:</strong><br />
 
                         <script type="syntaxhighlighter" class="brush: xml; toolbar: false;gutter: false; first-line: 1">
@@ -168,14 +168,14 @@
                                 <b:column col-xs="6"><h:outputText value="col-xs=6"/></b:column>
                                 <b:column col-xs="6"><h:outputText value="col-xs=6"/></b:column>
                             </b:row>
-                            ]]></script></div></div></div><input type="hidden" name="j_idt109_collapsed" id="j_idt109_collapsed" value="false" /><script>
- $('#j_idt109content').on('show.bs.collapse', function(){ document.getElementById('j_idt109_collapsed').value='false'; });
- $('#j_idt109content').on('hide.bs.collapse', function(){ document.getElementById('j_idt109_collapsed').value='true'; });
+                            ]]></script></div></div></div><input type="hidden" name="j_idt110_collapsed" id="j_idt110_collapsed" value="false" /><script>
+ $('#j_idt110content').on('show.bs.collapse', function(){ document.getElementById('j_idt110_collapsed').value='false'; });
+ $('#j_idt110content').on('hide.bs.collapse', function(){ document.getElementById('j_idt110_collapsed').value='true'; });
 </script>
                 <h3>Example: Mobile, tablet, desktops</h3>
-                <p>Build on the previous example by creating even more dynamic and powerful layouts with tablet <code>col-sm=*</code> attribute.</p><div class="panel-group"><div id="j_idt132" class="panel panel-default"><div id="j_idt132content" class="panel-body  panel-collapse collapse in"><div id="j_idt133" class="row show-grid"><div id="j_idt134" class="col-md-8 col-xs-12 col-sm-6">col-xs=12 col-sm=6 col-md=8</div><div id="j_idt136" class="col-md-4 col-xs-6 col-sm-6">col-xs=6 col-sm=6 col-md=4</div></div><div id="j_idt138" class="row show-grid"><div id="j_idt139" class="col-md-4 col-xs-6 col-sm-4">col-xs=6 col-sm=4 col-md=4</div><div id="j_idt141" class="col-md-4 col-xs-6 col-sm-4">col-xs=6 col-sm=4 col-md=4</div>
+                <p>Build on the previous example by creating even more dynamic and powerful layouts with tablet <code>col-sm=*</code> attribute.</p><div class="panel-group"><div id="j_idt133" class="panel panel-default"><div id="j_idt133content" class="panel-body  panel-collapse collapse in"><div id="j_idt134" class="row show-grid"><div id="j_idt135" class="col-md-8 col-xs-12 col-sm-6">col-xs=12 col-sm=6 col-md=8</div><div id="j_idt137" class="col-md-4 col-xs-6 col-sm-6">col-xs=6 col-sm=6 col-md=4</div></div><div id="j_idt139" class="row show-grid"><div id="j_idt140" class="col-md-4 col-xs-6 col-sm-4">col-xs=6 col-sm=4 col-md=4</div><div id="j_idt142" class="col-md-4 col-xs-6 col-sm-4">col-xs=6 col-sm=4 col-md=4</div>
                         <!-- Optional: clear the XS cols if their content doesn't match in height -->
-                        <div class="clearfix visible-xs"></div><div id="j_idt144" class="col-md-4 col-xs-6 col-sm-4">col-xs=6 col-sm=4 col-md=4</div></div></div><div class="panel-footer">
+                        <div class="clearfix visible-xs"></div><div id="j_idt145" class="col-md-4 col-xs-6 col-sm-4">col-xs=6 col-sm=4 col-md=4</div></div></div><div class="panel-footer">
                         <strong>Markup:</strong><br />
 
                         <script type="syntaxhighlighter" class="brush: xml; toolbar: false;gutter: false; first-line: 1">
@@ -191,15 +191,15 @@
                                 <div class="clearfix visible-xs"></div>
                                 <b:column col-xs="6" col-sm="4" col-md="4"><h:outputText value="col-xs=6 col-sm=4 col-md=4"/></b:column>
                             </b:row>
-                            ]]></script></div></div></div><input type="hidden" name="j_idt132_collapsed" id="j_idt132_collapsed" value="false" /><script>
- $('#j_idt132content').on('show.bs.collapse', function(){ document.getElementById('j_idt132_collapsed').value='false'; });
- $('#j_idt132content').on('hide.bs.collapse', function(){ document.getElementById('j_idt132_collapsed').value='true'; });
+                            ]]></script></div></div></div><input type="hidden" name="j_idt133_collapsed" id="j_idt133_collapsed" value="false" /><script>
+ $('#j_idt133content').on('show.bs.collapse', function(){ document.getElementById('j_idt133_collapsed').value='false'; });
+ $('#j_idt133content').on('hide.bs.collapse', function(){ document.getElementById('j_idt133_collapsed').value='true'; });
 </script>
                 <h3>Offsetting columns</h3>
                 <p> Move columns to the right using <code>offset=*</code> or <code>col-md-offset=*</code> attribute.
                     These attributes increase the left margin of a column by <code>*</code> columns.
                     For example, <code>offest=4</code> moves a <code>span=4</code> over four columns.
-                </p><div class="panel-group"><div id="j_idt148" class="panel panel-default"><div id="j_idt148content" class="panel-body  panel-collapse collapse in"><div id="j_idt149" class="row show-grid"><div id="j_idt150" class="col-md-4">span=4</div><div id="j_idt152" class="col-md-4 col-md-offset-4">span=4 offset=4</div></div><div id="j_idt154" class="row show-grid"><div id="j_idt155" class="col-md-3 col-md-offset-3">span=3 offset=3</div><div id="j_idt157" class="col-md-3 col-md-offset-3">span=3 offset=3</div></div><div id="j_idt159" class="row show-grid"><div id="j_idt160" class="col-md-6 col-md-offset-3">span=6 offset=3</div></div></div><div class="panel-footer">
+                </p><div class="panel-group"><div id="j_idt149" class="panel panel-default"><div id="j_idt149content" class="panel-body  panel-collapse collapse in"><div id="j_idt150" class="row show-grid"><div id="j_idt151" class="col-md-4">span=4</div><div id="j_idt153" class="col-md-4 col-md-offset-4">span=4 offset=4</div></div><div id="j_idt155" class="row show-grid"><div id="j_idt156" class="col-md-3 col-md-offset-3">span=3 offset=3</div><div id="j_idt158" class="col-md-3 col-md-offset-3">span=3 offset=3</div></div><div id="j_idt160" class="row show-grid"><div id="j_idt161" class="col-md-6 col-md-offset-3">span=6 offset=3</div></div></div><div class="panel-footer">
                         <strong>Markup:</strong><br />
 
                         <script type="syntaxhighlighter" class="brush: xml; toolbar: false;gutter: false; first-line: 1">
@@ -215,16 +215,16 @@
                             <b:row styleClass="show-grid">
                                 <b:column span="6" offset="3"><h:outputText value="span=6 offset=3"/></b:column>
                             </b:row>
-                            ]]></script></div></div></div><input type="hidden" name="j_idt148_collapsed" id="j_idt148_collapsed" value="false" /><script>
- $('#j_idt148content').on('show.bs.collapse', function(){ document.getElementById('j_idt148_collapsed').value='false'; });
- $('#j_idt148content').on('hide.bs.collapse', function(){ document.getElementById('j_idt148_collapsed').value='true'; });
+                            ]]></script></div></div></div><input type="hidden" name="j_idt149_collapsed" id="j_idt149_collapsed" value="false" /><script>
+ $('#j_idt149content').on('show.bs.collapse', function(){ document.getElementById('j_idt149_collapsed').value='false'; });
+ $('#j_idt149content').on('hide.bs.collapse', function(){ document.getElementById('j_idt149_collapsed').value='true'; });
 </script>
                 <h3>Nesting columns</h3>
                 <p>
                 To nest your content with the default grid, add a new <code>row</code> and set of <code>col-md=*</code> columns within an existing
                 <code>col-md=*</code> column.
                 Nested rows should include a set of columns that add up to 12.
-                </p><div class="panel-group"><div id="j_idt164" class="panel panel-default"><div id="j_idt164content" class="panel-body  panel-collapse collapse in"><div id="j_idt165" class="row show-grid"><div id="j_idt166" class="col-md-9">Level 1: col-md=9<div id="j_idt168" class="row show-grid"><div id="j_idt169" class="col-md-6">Level 2: col-md=6</div><div id="j_idt171" class="col-md-6">Level 2: col-md=6</div></div></div></div></div><div class="panel-footer">
+                </p><div class="panel-group"><div id="j_idt165" class="panel panel-default"><div id="j_idt165content" class="panel-body  panel-collapse collapse in"><div id="j_idt166" class="row show-grid"><div id="j_idt167" class="col-md-9">Level 1: col-md=9<div id="j_idt169" class="row show-grid"><div id="j_idt170" class="col-md-6">Level 2: col-md=6</div><div id="j_idt172" class="col-md-6">Level 2: col-md=6</div></div></div></div></div><div class="panel-footer">
                         <strong>Markup:</strong><br />
 
                         <script type="syntaxhighlighter" class="brush: xml; toolbar: false;gutter: false; first-line: 1">
@@ -238,14 +238,14 @@
                                     </b:row>
                                 </b:column>
                             </b:row>
-                            ]]></script></div></div></div><input type="hidden" name="j_idt164_collapsed" id="j_idt164_collapsed" value="false" /><script>
- $('#j_idt164content').on('show.bs.collapse', function(){ document.getElementById('j_idt164_collapsed').value='false'; });
- $('#j_idt164content').on('hide.bs.collapse', function(){ document.getElementById('j_idt164_collapsed').value='true'; });
+                            ]]></script></div></div></div><input type="hidden" name="j_idt165_collapsed" id="j_idt165_collapsed" value="false" /><script>
+ $('#j_idt165content').on('show.bs.collapse', function(){ document.getElementById('j_idt165_collapsed').value='false'; });
+ $('#j_idt165content').on('hide.bs.collapse', function(){ document.getElementById('j_idt165_collapsed').value='true'; });
 </script>
 
                 <br />
-                <h2>Reference section</h2><div class="panel-group"><div id="j_idt176" class="panel panel-info"><div class="panel-heading"><a data-toggle="collapse" data-target="#j_idt176content">
-				<b>Attributes of &lt;b:container &gt;</b></a></div><div id="j_idt176content" class="panel-body  panel-collapse collapse in">
+                <h2>Reference section</h2><div class="panel-group"><div id="j_idt177" class="panel panel-info"><div class="panel-heading"><a data-toggle="collapse" data-target="#j_idt177content">
+				<b>Attributes of &lt;b:container &gt;</b></a></div><div id="j_idt177content" class="panel-body  panel-collapse collapse in">
 			<table class="table table-striped table-hover" style="background-color: #fff">
 				<thead>
 					<tr>
@@ -306,11 +306,11 @@
 					    <td>Where is the tooltip to be displayed? Possible values: "top", "bottom", "right", "left", "auto", "auto top", "auto bottom", "auto right" and "auto left". Default to "bottom".</td>
 					</tr>
 				</tbody>
-			</table></div></div></div><input type="hidden" name="j_idt176_collapsed" id="j_idt176_collapsed" value="false" /><script>
- $('#j_idt176content').on('show.bs.collapse', function(){ document.getElementById('j_idt176_collapsed').value='false'; });
- $('#j_idt176content').on('hide.bs.collapse', function(){ document.getElementById('j_idt176_collapsed').value='true'; });
-</script><div class="panel-group"><div id="j_idt180" class="panel panel-info"><div class="panel-heading"><a data-toggle="collapse" data-target="#j_idt180content">
-				<b>Attributes of &lt;b:row &gt;</b></a></div><div id="j_idt180content" class="panel-body  panel-collapse collapse in">
+			</table></div></div></div><input type="hidden" name="j_idt177_collapsed" id="j_idt177_collapsed" value="false" /><script>
+ $('#j_idt177content').on('show.bs.collapse', function(){ document.getElementById('j_idt177_collapsed').value='false'; });
+ $('#j_idt177content').on('hide.bs.collapse', function(){ document.getElementById('j_idt177_collapsed').value='true'; });
+</script><div class="panel-group"><div id="j_idt181" class="panel panel-info"><div class="panel-heading"><a data-toggle="collapse" data-target="#j_idt181content">
+				<b>Attributes of &lt;b:row &gt;</b></a></div><div id="j_idt181content" class="panel-body  panel-collapse collapse in">
 			<table class="table table-striped table-hover" style="background-color: #fff">
 				<thead>
 					<tr>
@@ -366,11 +366,11 @@
 					    <td>Where is the tooltip to be displayed? Possible values: "top", "bottom", "right", "left", "auto", "auto top", "auto bottom", "auto right" and "auto left". Default to "bottom".</td>
 					</tr>
 				</tbody>
-			</table></div></div></div><input type="hidden" name="j_idt180_collapsed" id="j_idt180_collapsed" value="false" /><script>
- $('#j_idt180content').on('show.bs.collapse', function(){ document.getElementById('j_idt180_collapsed').value='false'; });
- $('#j_idt180content').on('hide.bs.collapse', function(){ document.getElementById('j_idt180_collapsed').value='true'; });
-</script><div class="panel-group"><div id="j_idt184" class="panel panel-info"><div class="panel-heading"><a data-toggle="collapse" data-target="#j_idt184content">
-				<b>Attributes of &lt;b:column &gt;</b></a></div><div id="j_idt184content" class="panel-body  panel-collapse collapse in">
+			</table></div></div></div><input type="hidden" name="j_idt181_collapsed" id="j_idt181_collapsed" value="false" /><script>
+ $('#j_idt181content').on('show.bs.collapse', function(){ document.getElementById('j_idt181_collapsed').value='false'; });
+ $('#j_idt181content').on('hide.bs.collapse', function(){ document.getElementById('j_idt181_collapsed').value='true'; });
+</script><div class="panel-group"><div id="j_idt185" class="panel panel-info"><div class="panel-heading"><a data-toggle="collapse" data-target="#j_idt185content">
+				<b>Attributes of &lt;b:column &gt;</b></a></div><div id="j_idt185content" class="panel-body  panel-collapse collapse in">
 			<table class="table table-striped table-hover" style="background-color: #fff">
 				<thead>
 					<tr>
@@ -471,9 +471,9 @@
 					    <td>Where is the tooltip to be displayed? Possible values: "top", "bottom", "right", "left", "auto", "auto top", "auto bottom", "auto right" and "auto left". Default to "bottom".</td>
 					</tr>
 				</tbody>
-			</table></div></div></div><input type="hidden" name="j_idt184_collapsed" id="j_idt184_collapsed" value="false" /><script>
- $('#j_idt184content').on('show.bs.collapse', function(){ document.getElementById('j_idt184_collapsed').value='false'; });
- $('#j_idt184content').on('hide.bs.collapse', function(){ document.getElementById('j_idt184_collapsed').value='true'; });
+			</table></div></div></div><input type="hidden" name="j_idt185_collapsed" id="j_idt185_collapsed" value="false" /><script>
+ $('#j_idt185content').on('show.bs.collapse', function(){ document.getElementById('j_idt185_collapsed').value='false'; });
+ $('#j_idt185content').on('hide.bs.collapse', function(){ document.getElementById('j_idt185_collapsed').value='true'; });
 </script>
                 
                 

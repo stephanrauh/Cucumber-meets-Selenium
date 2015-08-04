@@ -3,8 +3,8 @@
                 <h3>Requirements</h3>
                 <p>Read the <a href="/BootsFacesWeb/requirements.jsf>requirements</a>.</p>
                 <hr />
-                <h3>Download</h3><input type="hidden" name="j_idt66_activeIndex" id="j_idt66_activeIndex" value="0" /><div class="tab-panel" role="tabpanel"><ul id="j_idt66" class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a role="tab" data-toggle="tab" href="#j_idt67" onclick="document.getElementById('j_idt66_activeIndex').value='0';">Maven</a></li><li role="presentation"><a role="tab" data-toggle="tab" href="#j_idt71" onclick="document.getElementById('j_idt66_activeIndex').value='1';">Gradle</a></li><li role="presentation"><a role="tab" data-toggle="tab" href="#j_idt75" onclick="document.getElementById('j_idt66_activeIndex').value='2';">Manual download</a></li></ul></div><div class="tab-content" style="height:180px" role="tablist"><div id="j_idt67" class="tab-pane active">
-						<p>Add these lines to your Maven pom.xml build file:</p><div id="j_idt69" class="well">
+                <h3>Download</h3><input type="hidden" name="j_idt67_activeIndex" id="j_idt67_activeIndex" value="0" /><div class="tab-panel" role="tabpanel"><ul id="j_idt67" class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a role="tab" data-toggle="tab" href="#j_idt68" onclick="document.getElementById('j_idt67_activeIndex').value='0';">Maven</a></li><li role="presentation"><a role="tab" data-toggle="tab" href="#j_idt72" onclick="document.getElementById('j_idt67_activeIndex').value='1';">Gradle</a></li><li role="presentation"><a role="tab" data-toggle="tab" href="#j_idt76" onclick="document.getElementById('j_idt67_activeIndex').value='2';">Manual download</a></li></ul></div><div class="tab-content" style="height:180px" role="tablist"><div id="j_idt68" class="tab-pane active">
+						<p>Add these lines to your Maven pom.xml build file:</p><div id="j_idt70" class="well">
                     		<script type="syntaxhighlighter" class="brush: xml; toolbar: false;gutter: false; first-line: 1">
                             <![CDATA[
                             		<dependency>
@@ -14,18 +14,18 @@
                             			<scope>compile</scope>
                             		</dependency>
                             ]]>
-                            </script></div></div><div id="j_idt71" class="tab-pane">
-						<p>Add this line to your .gradle build file:</p><div id="j_idt73" class="well">
+                            </script></div></div><div id="j_idt72" class="tab-pane">
+						<p>Add this line to your .gradle build file:</p><div id="j_idt74" class="well">
                             <script type="syntaxhighlighter" class="brush: groovy; toolbar: false;gutter: false; first-line: 1">
                             <![CDATA[
                             	compile 'net.bootsfaces:bootsfaces:0.6.6'
                             ]]>
-                            </script></div></div><div id="j_idt75" class="tab-pane">
+                            </script></div></div><div id="j_idt76" class="tab-pane">
                			<p>If you have not downloaded BootsFaces yet, <span>click here: Dieser Link ist deaktiviert, da ein Navigationsfall nicht abgeglichen werden konnte.</span>.</p></div></div>
                 <hr />
                 <h3>Starting a project</h3>
                 <p>Open your favorite IDE, start a new project and add the downloaded BootsFaces Jar to your libraries.</p>
-                <p>Now, create a new JSF page and make the page header look as follows:</p><div class="panel-group"><div id="j_idt80" class="panel panel-default"><div id="j_idt80content" class="panel-body  panel-collapse collapse in"><!--div class="thumbnail"-->
+                <p>Now, create a new JSF page and make the page header look as follows:</p><div class="panel-group"><div id="j_idt81" class="panel panel-default"><div id="j_idt81content" class="panel-body  panel-collapse collapse in"><!--div class="thumbnail"-->
                 <script type="syntaxhighlighter" class="brush: xml; toolbar: false;first-line: 0">
                         <![CDATA[
                         <?xml version='1.0' encoding='UTF-8' ?>
@@ -34,14 +34,14 @@
                               xmlns:b="http://bootsfaces.net/ui"
                               xmlns:h="http://java.sun.com/jsf/html"
                               xmlns:f="http://java.sun.com/jsf/core">
-                        ]]></script></div></div></div><input type="hidden" name="j_idt80_collapsed" id="j_idt80_collapsed" value="false" /><script>
- $('#j_idt80content').on('show.bs.collapse', function(){ document.getElementById('j_idt80_collapsed').value='false'; });
- $('#j_idt80content').on('hide.bs.collapse', function(){ document.getElementById('j_idt80_collapsed').value='true'; });
+                        ]]></script></div></div></div><input type="hidden" name="j_idt81_collapsed" id="j_idt81_collapsed" value="false" /><script>
+ $('#j_idt81content').on('show.bs.collapse', function(){ document.getElementById('j_idt81_collapsed').value='false'; });
+ $('#j_idt81content').on('hide.bs.collapse', function(){ document.getElementById('j_idt81_collapsed').value='true'; });
 </script><!--/div-->
                 <p>Notice the <code>&lt;!DOCTYPE html&gt;</code> declaration, needed because BootsFaces makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype
                     and the <code>xmlns:b="http://bootsfaces.net/ui"</code> namespace, that enables the use of BootsFaces tags in your JSF page.</p>
                 <p class="text-success">You are now ready to develop your project with BootsFaces!</p>
-                <p>This is a BootsFaces minimal Page, to get you started:</p><div class="panel-group"><div id="j_idt83" class="panel panel-default"><div id="j_idt83content" class="panel-body  panel-collapse collapse in">
+                <p>This is a BootsFaces minimal Page, to get you started:</p><div class="panel-group"><div id="j_idt84" class="panel panel-default"><div id="j_idt84content" class="panel-body  panel-collapse collapse in">
                 <script type="syntaxhighlighter" class="brush: xml; toolbar: false;first-line: 0">
                         <![CDATA[
                         <?xml version='1.0' encoding='UTF-8' ?>
@@ -63,16 +63,16 @@
                                 </b:container>
                             </h:body>
                         </html>
-                        ]]></script></div></div></div><input type="hidden" name="j_idt83_collapsed" id="j_idt83_collapsed" value="false" /><script>
- $('#j_idt83content').on('show.bs.collapse', function(){ document.getElementById('j_idt83_collapsed').value='false'; });
- $('#j_idt83content').on('hide.bs.collapse', function(){ document.getElementById('j_idt83_collapsed').value='true'; });
+                        ]]></script></div></div></div><input type="hidden" name="j_idt84_collapsed" id="j_idt84_collapsed" value="false" /><script>
+ $('#j_idt84content').on('show.bs.collapse', function(){ document.getElementById('j_idt84_collapsed').value='false'; });
+ $('#j_idt84content').on('hide.bs.collapse', function(){ document.getElementById('j_idt84_collapsed').value='true'; });
 </script>
                 <p>However, we suggest you start reading the <a href="/BootsFacesWeb/layout/basic.jsf>Basic Layout</a> page and have a look at the
                    <a href="/BootsFacesWeb/examples/starter_template.jsf>starter template</a> in the <a href="/BootsFacesWeb/examples/index.jsf>Examples</a> section.</p>
                 <hr />
                 
                 <h3>web.xml and faces-config.xml</h3>
-                <p>Sometimes the CSS and Javascript files aren't loaded automatically. If you happen to run into this error, you have to add a few lines to the <code>faces-config.xml</code> and the <code>web.xml</code> files.</p><input type="hidden" name="j_idt92_activeIndex" id="j_idt92_activeIndex" value="0" /><div class="tab-panel" role="tabpanel"><ul id="j_idt92" class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a role="tab" data-toggle="tab" href="#j_idt93" onclick="document.getElementById('j_idt92_activeIndex').value='0';">web.xml (recommended)</a></li><li role="presentation"><a role="tab" data-toggle="tab" href="#j_idt96" onclick="document.getElementById('j_idt92_activeIndex').value='1';">web.xml (workaround)</a></li><li role="presentation"><a role="tab" data-toggle="tab" href="#j_idt99" onclick="document.getElementById('j_idt92_activeIndex').value='2';">faces-config.xml (workaround)</a></li></ul></div><div class="tab-content" role="tablist"><div id="j_idt93" class="tab-pane active"><div class="panel-group"><div id="j_idt94" class="panel panel-default"><div id="j_idt94content" class="panel-body  panel-collapse collapse in">
+                <p>Sometimes the CSS and Javascript files aren't loaded automatically. If you happen to run into this error, you have to add a few lines to the <code>faces-config.xml</code> and the <code>web.xml</code> files.</p><input type="hidden" name="j_idt93_activeIndex" id="j_idt93_activeIndex" value="0" /><div class="tab-panel" role="tabpanel"><ul id="j_idt93" class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a role="tab" data-toggle="tab" href="#j_idt94" onclick="document.getElementById('j_idt93_activeIndex').value='0';">web.xml (recommended)</a></li><li role="presentation"><a role="tab" data-toggle="tab" href="#j_idt97" onclick="document.getElementById('j_idt93_activeIndex').value='1';">web.xml (workaround)</a></li><li role="presentation"><a role="tab" data-toggle="tab" href="#j_idt100" onclick="document.getElementById('j_idt93_activeIndex').value='2';">faces-config.xml (workaround)</a></li></ul></div><div class="tab-content" role="tablist"><div id="j_idt94" class="tab-pane active"><div class="panel-group"><div id="j_idt95" class="panel panel-default"><div id="j_idt95content" class="panel-body  panel-collapse collapse in">
                         <p>Keep the URL patterns of your web application as simple as possible. In this case, the resource files are loaded without further ado.
                         The hints the the other two tabs are only workarounds if this <code>web.xml</code> doesn't do the trick, or if you need
                         a more complex <code>url-pattern</code> for some reason.</p>    
@@ -88,10 +88,10 @@
                                 <url-pattern>*.jsf</url-pattern>
                                 <url-pattern>/javax.faces.resource/*</url-pattern>
                             </servlet-mapping>
-                        ]]></script></div></div></div><input type="hidden" name="j_idt94_collapsed" id="j_idt94_collapsed" value="false" /><script>
- $('#j_idt94content').on('show.bs.collapse', function(){ document.getElementById('j_idt94_collapsed').value='false'; });
- $('#j_idt94content').on('hide.bs.collapse', function(){ document.getElementById('j_idt94_collapsed').value='true'; });
-</script></div><div id="j_idt96" class="tab-pane"><div class="panel-group"><div id="j_idt97" class="panel panel-default"><div id="j_idt97content" class="panel-body  panel-collapse collapse in">
+                        ]]></script></div></div></div><input type="hidden" name="j_idt95_collapsed" id="j_idt95_collapsed" value="false" /><script>
+ $('#j_idt95content').on('show.bs.collapse', function(){ document.getElementById('j_idt95_collapsed').value='false'; });
+ $('#j_idt95content').on('hide.bs.collapse', function(){ document.getElementById('j_idt95_collapsed').value='true'; });
+</script></div><div id="j_idt97" class="tab-pane"><div class="panel-group"><div id="j_idt98" class="panel panel-default"><div id="j_idt98content" class="panel-body  panel-collapse collapse in">
                         <p>It seems that multiple or non-standard <code>url-patterns</code> causes problem when it comes to loading resources. For instance,
                         <code>&lt;url-pattern&gt;/page/&lt;url-pattern&gt;</code> is popular in the textbooks, but it's not recommendable in the
                         real world. However, if you need such a pattern for some reason, add a second URL pattern <code>/javax.faces.resource/*</code> to the web.xml:</p>    
@@ -107,10 +107,10 @@
                          		<url-pattern>*.jsf</url-pattern>
                          		<url-pattern>/javax.faces.resource/*</url-pattern>
                          	</servlet-mapping>
-                        ]]></script></div></div></div><input type="hidden" name="j_idt97_collapsed" id="j_idt97_collapsed" value="false" /><script>
- $('#j_idt97content').on('show.bs.collapse', function(){ document.getElementById('j_idt97_collapsed').value='false'; });
- $('#j_idt97content').on('hide.bs.collapse', function(){ document.getElementById('j_idt97_collapsed').value='true'; });
-</script></div><div id="j_idt99" class="tab-pane"><div class="panel-group"><div id="j_idt100" class="panel panel-default"><div id="j_idt100content" class="panel-body  panel-collapse collapse in">
+                        ]]></script></div></div></div><input type="hidden" name="j_idt98_collapsed" id="j_idt98_collapsed" value="false" /><script>
+ $('#j_idt98content').on('show.bs.collapse', function(){ document.getElementById('j_idt98_collapsed').value='false'; });
+ $('#j_idt98content').on('hide.bs.collapse', function(){ document.getElementById('j_idt98_collapsed').value='true'; });
+</script></div><div id="j_idt100" class="tab-pane"><div class="panel-group"><div id="j_idt101" class="panel panel-default"><div id="j_idt101content" class="panel-body  panel-collapse collapse in">
                         <p>Use this hint only as a last resort if everything else has failed.
     				     Adding the <code>UnmappedResourceHandler</code> to the <code>faces-config.xml</code> can fix nasty resource loading problems:
                          </p>
@@ -126,9 +126,9 @@
                              		<resource-handler>net.bootsfaces.render.UnmappedResourceHandler</resource-handler>
                              	</application>
                              </faces-config>
-                         ]]></script></div></div></div><input type="hidden" name="j_idt100_collapsed" id="j_idt100_collapsed" value="false" /><script>
- $('#j_idt100content').on('show.bs.collapse', function(){ document.getElementById('j_idt100_collapsed').value='false'; });
- $('#j_idt100content').on('hide.bs.collapse', function(){ document.getElementById('j_idt100_collapsed').value='true'; });
+                         ]]></script></div></div></div><input type="hidden" name="j_idt101_collapsed" id="j_idt101_collapsed" value="false" /><script>
+ $('#j_idt101content').on('show.bs.collapse', function(){ document.getElementById('j_idt101_collapsed').value='false'; });
+ $('#j_idt101content').on('hide.bs.collapse', function(){ document.getElementById('j_idt101_collapsed').value='true'; });
 </script></div></div>     
                 
                 <h3>Theme CSS support</h3>

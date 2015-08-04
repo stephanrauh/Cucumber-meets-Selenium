@@ -2,7 +2,7 @@
                 <p class="lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
                 <p>A default gray alert wouldn't make too much sense, so you're required to specify a type with the severity attribute. Choose from success, info, warning, or danger.</p>
                 <p>The <code>title</code> attribute is optional and will add a title to the Alert.</p>
-                <p>The b:alert tag is a container so you are free to use the markup you prefer for the message:</p><div class="panel-group"><div id="j_idt64" class="panel panel-default"><div class="panel-heading"><a data-toggle="collapse" data-target="#j_idt64content"><b>EXAMPLE</b></a></div><div id="j_idt64content" class="panel-body  panel-collapse collapse in"><div id="j_idt66" class="alert alert-success fadein"><strong>Well done!</strong> You successfully read this important alert message.</div><div id="j_idt68" class="alert alert-info fadein"><strong>Heads up!</strong> This alert needs your attention, but it's not super important. </div><div id="j_idt70" class="alert alert-warning fadein"><strong>Warning!</strong> Best check yo self, you're not looking too good. </div><div id="j_idt72" class="alert alert-danger fadein"><strong>Oh snap!</strong> Change a few things up and try submitting again. </div><div id="j_idt74" class="alert alert-info fadein"><strong>Heads up!</strong><br />This alert needs your attention, but it's not super important. </div></div><div class="panel-footer">
+                <p>The b:alert tag is a container so you are free to use the markup you prefer for the message:</p><div class="panel-group"><div id="j_idt65" class="panel panel-default"><div class="panel-heading"><a data-toggle="collapse" data-target="#j_idt65content"><b>EXAMPLE</b></a></div><div id="j_idt65content" class="panel-body  panel-collapse collapse in"><div id="j_idt67" class="alert alert-success fadein"><strong>Well done!</strong> You successfully read this important alert message.</div><div id="j_idt69" class="alert alert-info fadein"><strong>Heads up!</strong> This alert needs your attention, but it's not super important. </div><div id="j_idt71" class="alert alert-warning fadein"><strong>Warning!</strong> Best check yo self, you're not looking too good. </div><div id="j_idt73" class="alert alert-danger fadein"><strong>Oh snap!</strong> Change a few things up and try submitting again. </div><div id="j_idt75" class="alert alert-info fadein"><strong>Heads up!</strong><br />This alert needs your attention, but it's not super important. </div></div><div class="panel-footer">
                         <strong>Markup:</strong><br />
 
                         <script type="syntaxhighlighter" class="brush: xml; toolbar: false;first-line: 1">
@@ -13,18 +13,18 @@
                             <b:alert severity="danger"><strong>Oh snap!</strong> Change a few things up and try submitting again. </b:alert>
                             
                             <b:alert severity="info" title="Heads up!">This alert needs your attention, but it's not super important. </b:alert>
-                            ]]></script></div></div></div><input type="hidden" name="j_idt64_collapsed" id="j_idt64_collapsed" value="false" /><script>
- $('#j_idt64content').on('show.bs.collapse', function(){ document.getElementById('j_idt64_collapsed').value='false'; });
- $('#j_idt64content').on('hide.bs.collapse', function(){ document.getElementById('j_idt64_collapsed').value='true'; });
+                            ]]></script></div></div></div><input type="hidden" name="j_idt65_collapsed" id="j_idt65_collapsed" value="false" /><script>
+ $('#j_idt65content').on('show.bs.collapse', function(){ document.getElementById('j_idt65_collapsed').value='false'; });
+ $('#j_idt65content').on('hide.bs.collapse', function(){ document.getElementById('j_idt65_collapsed').value='true'; });
 </script>
                 <br />
                 <h4>Dismissable alerts</h4>
-                <p>You can make Alerts dismissable adding <code>closable="true"</code> :</p><div id="j_idt78" class="alert alert-warning fadein"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Warning Title</strong><br /><strong>Warning!</strong> Best check yo self, you're not looking too good. </div>
+                <p>You can make Alerts dismissable adding <code>closable="true"</code> :</p><div id="j_idt79" class="alert alert-warning fadein"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Warning Title</strong><br /><strong>Warning!</strong> Best check yo self, you're not looking too good. </div>
                 <p>this message will close when you click on the cross on the left.</p>
                 
                 <br />
-                <h2>Reference section</h2><div class="panel-group"><div id="j_idt82" class="panel panel-info"><div class="panel-heading"><a data-toggle="collapse" data-target="#j_idt82content">
-				<b>Attributes of &lt;b:alert &gt;</b></a></div><div id="j_idt82content" class="panel-body  panel-collapse collapse in">
+                <h2>Reference section</h2><div class="panel-group"><div id="j_idt83" class="panel panel-info"><div class="panel-heading"><a data-toggle="collapse" data-target="#j_idt83content">
+				<b>Attributes of &lt;b:alert &gt;</b></a></div><div id="j_idt83content" class="panel-body  panel-collapse collapse in">
 			<table class="table table-striped table-hover" style="background-color: #fff">
 				<thead>
 					<tr>
@@ -90,9 +90,9 @@
 					    <td>Where is the tooltip to be displayed? Possible values: "top", "bottom", "right", "left", "auto", "auto top", "auto bottom", "auto right" and "auto left". Default to "bottom".</td>
 					</tr>
 				</tbody>
-			</table></div></div></div><input type="hidden" name="j_idt82_collapsed" id="j_idt82_collapsed" value="false" /><script>
- $('#j_idt82content').on('show.bs.collapse', function(){ document.getElementById('j_idt82_collapsed').value='false'; });
- $('#j_idt82content').on('hide.bs.collapse', function(){ document.getElementById('j_idt82_collapsed').value='true'; });
+			</table></div></div></div><input type="hidden" name="j_idt83_collapsed" id="j_idt83_collapsed" value="false" /><script>
+ $('#j_idt83content').on('show.bs.collapse', function(){ document.getElementById('j_idt83_collapsed').value='false'; });
+ $('#j_idt83content').on('hide.bs.collapse', function(){ document.getElementById('j_idt83_collapsed').value='true'; });
 </script>
                 
                 <br /><br /><br />

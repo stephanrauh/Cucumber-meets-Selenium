@@ -3,7 +3,7 @@
                 <p><code>&lt;b:button&gt;</code>extends the standard JSF h:button component.</p>
                 
                 <strong>Button Look</strong>
-                <p>Button styles can be applied to anything with the <code>look</code> attribute:</p><input type="hidden" name="j_idt64_activeIndex" id="j_idt64_activeIndex" value="0" /><div class="tab-panel" role="tabpanel"><ul id="j_idt64" class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a role="tab" data-toggle="tab" href="#j_idt65" onclick="document.getElementById('j_idt64_activeIndex').value='0';">live preview</a></li><li role="presentation"><a role="tab" data-toggle="tab" href="#j_idt81" onclick="document.getElementById('j_idt64_activeIndex').value='1';">JSF markup</a></li></ul></div><div class="tab-content" role="tablist"><div id="j_idt65" class="tab-pane active">
+                <p>Button styles can be applied to anything with the <code>look</code> attribute:</p><input type="hidden" name="j_idt65_activeIndex" id="j_idt65_activeIndex" value="0" /><div class="tab-panel" role="tabpanel"><ul id="j_idt65" class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a role="tab" data-toggle="tab" href="#j_idt66" onclick="document.getElementById('j_idt65_activeIndex').value='0';">live preview</a></li><li role="presentation"><a role="tab" data-toggle="tab" href="#j_idt82" onclick="document.getElementById('j_idt65_activeIndex').value='1';">JSF markup</a></li></ul></div><div class="tab-content" role="tablist"><div id="j_idt66" class="tab-pane active">
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
@@ -14,43 +14,43 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><button id="j_idt67" name="j_idt67" type="button" class="btn btn-default">Default</button></td>
+                            <td><button id="j_idt68" name="j_idt68" type="button" class="btn btn-default">Default</button></td>
                             <td>missing</td>
                             <td>Standard gray button with gradient</td>
                         </tr>
                         <tr>
-                            <td><button id="j_idt69" name="j_idt69" type="button" class="btn btn-primary">Primary</button></td>
+                            <td><button id="j_idt70" name="j_idt70" type="button" class="btn btn-primary">Primary</button></td>
                             <td><code>look="primary"</code></td>
                             <td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
                         </tr>
                         <tr>
-                            <td><button id="j_idt71" name="j_idt71" type="button" class="btn btn-info">Info</button></td>
+                            <td><button id="j_idt72" name="j_idt72" type="button" class="btn btn-info">Info</button></td>
                             <td><code>look="info"</code></td>
                             <td>Used as an alternative to the default styles</td>
                         </tr>
                         <tr>
-                            <td><button id="j_idt73" name="j_idt73" type="button" class="btn btn-success">Success</button></td>
+                            <td><button id="j_idt74" name="j_idt74" type="button" class="btn btn-success">Success</button></td>
                             <td><code>look="success"</code></td>
                             <td>Indicates a successful or positive action</td>
                         </tr>
                         <tr>
-                            <td><button id="j_idt75" name="j_idt75" type="button" class="btn btn-warning">Warning</button></td>
+                            <td><button id="j_idt76" name="j_idt76" type="button" class="btn btn-warning">Warning</button></td>
                             <td><code>look="warning"</code></td>
                             <td>Indicates caution should be taken with this action</td>
                         </tr>
                         <tr>
-                            <td><button id="j_idt77" name="j_idt77" type="button" class="btn btn-danger">Danger</button></td>
+                            <td><button id="j_idt78" name="j_idt78" type="button" class="btn btn-danger">Danger</button></td>
                             <td><code>look="danger"</code></td>
                             <td>Indicates a dangerous or potentially negative action</td>
                         </tr>
                         <tr>
-                            <td><button id="j_idt79" name="j_idt79" type="button" class="btn btn-link">Link</button></td>
+                            <td><button id="j_idt80" name="j_idt80" type="button" class="btn btn-link">Link</button></td>
                             <td><code>look="link"</code></td>
                             <td>Alternate dark gray button, not tied to a semantic action or use</td>
                         </tr>
 
                     </tbody>
-                </table></div><div id="j_idt81" class="tab-pane">
+                </table></div><div id="j_idt82" class="tab-pane">
        <script type="syntaxhighlighter" class="brush: xml; toolbar: false;gutter: false; first-line: 1">
 <![CDATA[
                 <table class="table table-bordered table-striped">
@@ -108,20 +108,20 @@
                 <p>Fancy larger or smaller buttons? Add <code>size="lg"</code> (Large), <code>size="sm"</code> (Small), or <code>size="xs"</code> for additional sizes.</p><table cellpadding="5">
 <tbody>
 <tr>
-<td><button id="j_idt85" name="j_idt85" type="button" class="btn btn-lg btn-primary">Large button</button></td>
-<td><button id="j_idt86" name="j_idt86" type="button" class="btn btn-lg btn-default">Large button</button></td>
+<td><button id="j_idt86" name="j_idt86" type="button" class="btn btn-lg btn-primary">Large button</button></td>
+<td><button id="j_idt87" name="j_idt87" type="button" class="btn btn-lg btn-default">Large button</button></td>
 </tr>
 <tr>
-<td><button id="j_idt87" name="j_idt87" type="button" class="btn btn-primary">Normal button</button></td>
-<td><button id="j_idt88" name="j_idt88" type="button" class="btn btn-default">Normal button</button></td>
+<td><button id="j_idt88" name="j_idt88" type="button" class="btn btn-primary">Normal button</button></td>
+<td><button id="j_idt89" name="j_idt89" type="button" class="btn btn-default">Normal button</button></td>
 </tr>
 <tr>
-<td><button id="j_idt89" name="j_idt89" type="button" class="btn btn-sm btn-primary">Small button</button></td>
-<td><button id="j_idt90" name="j_idt90" type="button" class="btn btn-sm btn-default">Small button</button></td>
+<td><button id="j_idt90" name="j_idt90" type="button" class="btn btn-sm btn-primary">Small button</button></td>
+<td><button id="j_idt91" name="j_idt91" type="button" class="btn btn-sm btn-default">Small button</button></td>
 </tr>
 <tr>
-<td><button id="j_idt91" name="j_idt91" type="button" class="btn btn-xs btn-primary">Extra small button</button></td>
-<td><button id="j_idt92" name="j_idt92" type="button" class="btn btn-xs btn-default">Extra small button</button></td>
+<td><button id="j_idt92" name="j_idt92" type="button" class="btn btn-xs btn-primary">Extra small button</button></td>
+<td><button id="j_idt93" name="j_idt93" type="button" class="btn btn-xs btn-default">Extra small button</button></td>
 </tr>
 </tbody>
 </table>
@@ -139,24 +139,24 @@
 <td><span style="font-weight:bolder">Font Awesome</span></td>
 </tr>
 <tr>
-<td><button id="j_idt97" name="j_idt97" type="button" class="btn btn-default"><span><i id="j_idt97_icon" class="glyphicon glyphicon-download"></i></span> download</button></td>
-<td><button id="j_idt98" name="j_idt98" type="button" class="btn btn-default"><span><i id="j_idt98_icon" class="fa fa-cloud-download"></i></span> cloud-download</button></td>
+<td><button id="j_idt98" name="j_idt98" type="button" class="btn btn-default"><span><i id="j_idt98_icon" class="glyphicon glyphicon-download"></i></span> download</button></td>
+<td><button id="j_idt99" name="j_idt99" type="button" class="btn btn-default"><span><i id="j_idt99_icon" class="fa fa-cloud-download"></i></span> cloud-download</button></td>
 </tr>
 <tr>
-<td><button id="j_idt99" name="j_idt99" type="button" class="btn btn-warning"><span><i id="j_idt99_icon" class="glyphicon glyphicon-download"></i></span> download</button></td>
-<td><button id="j_idt100" name="j_idt100" type="button" class="btn btn-warning"><span><i id="j_idt100_icon" class="fa fa-cloud-download"></i></span> cloud-download</button></td>
+<td><button id="j_idt100" name="j_idt100" type="button" class="btn btn-warning"><span><i id="j_idt100_icon" class="glyphicon glyphicon-download"></i></span> download</button></td>
+<td><button id="j_idt101" name="j_idt101" type="button" class="btn btn-warning"><span><i id="j_idt101_icon" class="fa fa-cloud-download"></i></span> cloud-download</button></td>
 </tr>
 <tr>
-<td><button id="j_idt101" name="j_idt101" type="button" class="btn btn-primary">cog (icon Right) <span><i id="j_idt101_icon" class="glyphicon glyphicon-cog"></i></span></button></td>
-<td><button id="j_idt102" name="j_idt102" type="button" class="btn btn-primary">cogs (icon Right) <span><i id="j_idt102_icon" class="fa fa-cogs"></i></span></button></td>
+<td><button id="j_idt102" name="j_idt102" type="button" class="btn btn-primary">cog (icon Right) <span><i id="j_idt102_icon" class="glyphicon glyphicon-cog"></i></span></button></td>
+<td><button id="j_idt103" name="j_idt103" type="button" class="btn btn-primary">cogs (icon Right) <span><i id="j_idt103_icon" class="fa fa-cogs"></i></span></button></td>
 </tr>
 <tr>
-<td><button id="j_idt103" name="j_idt103" type="button" class="btn btn-info"><span><i id="j_idt103_icon" class="glyphicon glyphicon-stats"></i></span> stats</button></td>
-<td><button id="j_idt104" name="j_idt104" type="button" class="btn btn-info"><span><i id="j_idt104_icon" class="fa fa-bar-chart"></i></span> bar-chart</button></td>
+<td><button id="j_idt104" name="j_idt104" type="button" class="btn btn-info"><span><i id="j_idt104_icon" class="glyphicon glyphicon-stats"></i></span> stats</button></td>
+<td><button id="j_idt105" name="j_idt105" type="button" class="btn btn-info"><span><i id="j_idt105_icon" class="fa fa-bar-chart"></i></span> bar-chart</button></td>
 </tr>
 <tr>
-<td><button id="j_idt105" name="j_idt105" type="button" class="btn btn-lg btn-success"><span><i id="j_idt105_icon" class="glyphicon glyphicon-shopping-cart"></i></span> shopping-cart (size lg)</button></td>
-<td><button id="j_idt106" name="j_idt106" type="button" class="btn btn-lg btn-success"><span><i id="j_idt106_icon" class="fa fa-cart-plus"></i></span> cart-plus (size lg)</button></td>
+<td><button id="j_idt106" name="j_idt106" type="button" class="btn btn-lg btn-success"><span><i id="j_idt106_icon" class="glyphicon glyphicon-shopping-cart"></i></span> shopping-cart (size lg)</button></td>
+<td><button id="j_idt107" name="j_idt107" type="button" class="btn btn-lg btn-success"><span><i id="j_idt107_icon" class="fa fa-cart-plus"></i></span> cart-plus (size lg)</button></td>
 </tr>
 </tbody>
 </table>
@@ -166,21 +166,21 @@
                 <p>Make buttons look unclickable by fading them back 50%.</p><table cellpadding="5">
 <tbody>
 <tr>
-<td><button id="j_idt109" name="j_idt109" type="button" class="btn btn-primary disabled" disabled="disabled">Primary button</button></td>
-<td><button id="j_idt110" name="j_idt110" type="button" class="btn btn-default disabled" disabled="disabled">Button</button></td>
+<td><button id="j_idt110" name="j_idt110" type="button" class="btn btn-primary disabled" disabled="disabled">Primary button</button></td>
+<td><button id="j_idt111" name="j_idt111" type="button" class="btn btn-default disabled" disabled="disabled">Button</button></td>
 </tr>
 </tbody>
 </table>
 
                 <br />
                 <h4>Button functionality</h4>
-                <p>Just like h:button, <code>&lt;b:button&gt;</code> does GET requests targeting bookmarkable URLs.</p><div class="panel-group"><div id="j_idt112" class="panel panel-info"><div class="panel-heading"><a data-toggle="collapse" data-target="#j_idt112content"><b>EXAMPLE</b></a></div><div id="j_idt112content" class="panel-body  panel-collapse collapse in"><table cellpadding="10">
+                <p>Just like h:button, <code>&lt;b:button&gt;</code> does GET requests targeting bookmarkable URLs.</p><div class="panel-group"><div id="j_idt113" class="panel panel-info"><div class="panel-heading"><a data-toggle="collapse" data-target="#j_idt113content"><b>EXAMPLE</b></a></div><div id="j_idt113content" class="panel-body  panel-collapse collapse in"><table cellpadding="10">
 <tbody>
 <tr>
-<td><button id="j_idt115" name="j_idt115" type="button" class="btn btn-default" onclick="window.location.href='/BootsFacesWeb/forms/testButton.jsftestId=11';"><span><i id="j_idt115_icon" class="glyphicon glyphicon-bookmark"></i></span> Bookmark</button></td>
-<td><button id="j_idt117" name="j_idt117" type="button" class="btn btn-default" onclick="window.location.href='/BootsFacesWeb/forms/testButton.jsftestId=22';"><span><i id="j_idt117_icon" class="glyphicon glyphicon-envelope"></i></span> With Icon</button></td>
-<td><button id="j_idt119" name="j_idt119" type="button" class="btn btn-default" onclick="window.location.href='/BootsFacesWeb/forms/testButton.jsftestId=33';"><span><i id="j_idt119_icon" class="glyphicon glyphicon-envelope"></i></span> </button></td>
-<td><button id="j_idt121" name="j_idt121" type="button" class="btn btn-default disabled" onclick="window.location.href='/BootsFacesWeb/forms/testButton.jsftestId=44';" disabled="disabled"><span><i id="j_idt121_icon" class="glyphicon glyphicon-envelope"></i></span> Bookmark</button></td>
+<td><button id="j_idt116" name="j_idt116" type="button" class="btn btn-default" onclick="window.location.href='/BootsFacesWeb/forms/testButton.jsftestId=11';"><span><i id="j_idt116_icon" class="glyphicon glyphicon-bookmark"></i></span> Bookmark</button></td>
+<td><button id="j_idt118" name="j_idt118" type="button" class="btn btn-default" onclick="window.location.href='/BootsFacesWeb/forms/testButton.jsftestId=22';"><span><i id="j_idt118_icon" class="glyphicon glyphicon-envelope"></i></span> With Icon</button></td>
+<td><button id="j_idt120" name="j_idt120" type="button" class="btn btn-default" onclick="window.location.href='/BootsFacesWeb/forms/testButton.jsftestId=33';"><span><i id="j_idt120_icon" class="glyphicon glyphicon-envelope"></i></span> </button></td>
+<td><button id="j_idt122" name="j_idt122" type="button" class="btn btn-default disabled" onclick="window.location.href='/BootsFacesWeb/forms/testButton.jsftestId=44';" disabled="disabled"><span><i id="j_idt122_icon" class="glyphicon glyphicon-envelope"></i></span> Bookmark</button></td>
 </tr>
 </tbody>
 </table>
@@ -206,14 +206,14 @@
                         <f:param name="testId" value="44" />  
                     </b:button>
                 </h:panelGrid>
-                ]]></script></div></div></div><input type="hidden" name="j_idt112_collapsed" id="j_idt112_collapsed" value="false" /><script>
- $('#j_idt112content').on('show.bs.collapse', function(){ document.getElementById('j_idt112_collapsed').value='false'; });
- $('#j_idt112content').on('hide.bs.collapse', function(){ document.getElementById('j_idt112_collapsed').value='true'; });
+                ]]></script></div></div></div><input type="hidden" name="j_idt113_collapsed" id="j_idt113_collapsed" value="false" /><script>
+ $('#j_idt113content').on('show.bs.collapse', function(){ document.getElementById('j_idt113_collapsed').value='false'; });
+ $('#j_idt113content').on('hide.bs.collapse', function(){ document.getElementById('j_idt113_collapsed').value='true'; });
 </script>
                 
                 <br />
-                <h2>Reference section</h2><div class="panel-group"><div id="j_idt126" class="panel panel-info"><div class="panel-heading"><a data-toggle="collapse" data-target="#j_idt126content">
-				<b>Attributes of &lt;b:button &gt;</b></a></div><div id="j_idt126content" class="panel-body  panel-collapse collapse in">
+                <h2>Reference section</h2><div class="panel-group"><div id="j_idt127" class="panel panel-info"><div class="panel-heading"><a data-toggle="collapse" data-target="#j_idt127content">
+				<b>Attributes of &lt;b:button &gt;</b></a></div><div id="j_idt127content" class="panel-body  panel-collapse collapse in">
 			<table class="table table-striped table-hover" style="background-color: #fff">
 				<thead>
 					<tr>
@@ -424,9 +424,9 @@
 					    <td>Button text.</td>
 					</tr>
 				</tbody>
-			</table></div></div></div><input type="hidden" name="j_idt126_collapsed" id="j_idt126_collapsed" value="false" /><script>
- $('#j_idt126content').on('show.bs.collapse', function(){ document.getElementById('j_idt126_collapsed').value='false'; });
- $('#j_idt126content').on('hide.bs.collapse', function(){ document.getElementById('j_idt126_collapsed').value='true'; });
+			</table></div></div></div><input type="hidden" name="j_idt127_collapsed" id="j_idt127_collapsed" value="false" /><script>
+ $('#j_idt127content').on('show.bs.collapse', function(){ document.getElementById('j_idt127_collapsed').value='false'; });
+ $('#j_idt127content').on('hide.bs.collapse', function(){ document.getElementById('j_idt127_collapsed').value='true'; });
 </script>
                 
                 <script type="text/javascript">
